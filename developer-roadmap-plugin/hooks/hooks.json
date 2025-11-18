@@ -1,0 +1,185 @@
+{
+  "hooks": [
+    {
+      "name": "learning-progress-tracker",
+      "description": "Automatically track user progress through learning paths",
+      "trigger": "command_execution",
+      "command": "/learn",
+      "actions": [
+        {
+          "type": "track_progress",
+          "metadata": {
+            "role": "extract_from_context",
+            "level": "extract_from_context",
+            "module": "extract_from_context"
+          }
+        },
+        {
+          "type": "save_milestone",
+          "message": "Learning milestone recorded for {role}"
+        }
+      ]
+    },
+    {
+      "name": "assessment-score-recorder",
+      "description": "Record assessment scores and track improvement",
+      "trigger": "command_execution",
+      "command": "/assess",
+      "actions": [
+        {
+          "type": "store_score",
+          "metadata": {
+            "domain": "extract_from_context",
+            "score": "extract_from_context",
+            "timestamp": "current_time"
+          }
+        },
+        {
+          "type": "generate_recommendations",
+          "based_on": "score"
+        }
+      ]
+    },
+    {
+      "name": "project-completion-tracker",
+      "description": "Track completed projects and certifications",
+      "trigger": "command_execution",
+      "command": "/projects",
+      "actions": [
+        {
+          "type": "log_project_start",
+          "metadata": {
+            "project_name": "extract_from_context",
+            "difficulty": "extract_from_context",
+            "domain": "extract_from_context"
+          }
+        }
+      ]
+    },
+    {
+      "name": "agent-expertise-router",
+      "description": "Route questions to the most appropriate agent",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": [
+          "react", "vue", "javascript", "frontend", "ui", "css"
+        ]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "frontend-developer"
+        }
+      ]
+    },
+    {
+      "name": "skill-context-loader",
+      "description": "Automatically load relevant skills based on conversation context",
+      "trigger": "agent_invocation",
+      "actions": [
+        {
+          "type": "load_skill",
+          "matching_criteria": "agent_specialization"
+        }
+      ]
+    },
+    {
+      "name": "achievement-badge-system",
+      "description": "Award badges for completing milestones",
+      "trigger": "milestone_completion",
+      "actions": [
+        {
+          "type": "issue_badge",
+          "levels": ["bronze", "silver", "gold", "platinum"],
+          "criteria": {
+            "completed_modules": "count",
+            "assessment_score": "average",
+            "projects_completed": "count"
+          }
+        },
+        {
+          "type": "notify_user",
+          "message": "🎉 Congratulations! You've earned the {badge} badge!"
+        }
+      ]
+    },
+    {
+      "name": "learning-goal-reminder",
+      "description": "Periodically remind users about their learning goals",
+      "trigger": "scheduled_interval",
+      "schedule": "weekly",
+      "actions": [
+        {
+          "type": "retrieve_goals",
+          "from": "user_profile"
+        },
+        {
+          "type": "send_reminder",
+          "message": "Your learning goal this week: {goal}"
+        }
+      ]
+    },
+    {
+      "name": "mentor-pairing",
+      "description": "Suggest mentoring opportunities based on skill levels",
+      "trigger": "skill_level_change",
+      "actions": [
+        {
+          "type": "identify_peers",
+          "criteria": {
+            "skill_difference": "1-2 levels",
+            "domain_match": "exact"
+          }
+        },
+        {
+          "type": "suggest_mentoring",
+          "direction": "both_ways"
+        }
+      ]
+    },
+    {
+      "name": "error-educational-context",
+      "description": "Provide educational context when users encounter errors",
+      "trigger": "error_detected",
+      "actions": [
+        {
+          "type": "explain_error",
+          "include": ["cause", "solution", "prevention", "resources"]
+        },
+        {
+          "type": "link_to_skill",
+          "matching_criteria": "error_category"
+        }
+      ]
+    },
+    {
+      "name": "multi-agent-orchestration",
+      "description": "Enable parallel agent collaboration for complex problems",
+      "trigger": "complex_query_detected",
+      "conditions": {
+        "keywords_count": ">=3",
+        "domains": ">=2"
+      },
+      "actions": [
+        {
+          "type": "identify_relevant_agents",
+          "count": "up_to_3"
+        },
+        {
+          "type": "orchestrate_parallel_response",
+          "coordination": "sequential_then_summary"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "tracking_enabled": true,
+    "notifications_enabled": true,
+    "auto_agent_selection": true,
+    "skill_auto_load": true,
+    "achievement_system": true,
+    "mentor_suggestions": true,
+    "error_education": true,
+    "multi_agent_support": true
+  }
+}
