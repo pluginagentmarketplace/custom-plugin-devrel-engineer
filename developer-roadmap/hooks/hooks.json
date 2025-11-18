@@ -1,0 +1,142 @@
+{
+  "hooks": [
+    {
+      "name": "roadmap-context-router",
+      "description": "Route user queries to appropriate agent based on technology keywords",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["frontend", "react", "vue", "angular", "javascript", "css", "html", "web"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "frontend-web-specialist"
+        },
+        {
+          "type": "load_skill",
+          "skill": "frontend-frameworks"
+        }
+      ]
+    },
+    {
+      "name": "backend-context-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["backend", "nodejs", "python", "java", "go", "api", "database", "sql", "mongodb"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "backend-api-architect"
+        }
+      ]
+    },
+    {
+      "name": "devops-context-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["devops", "docker", "kubernetes", "aws", "cloud", "deployment", "cicd"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "devops-infrastructure-engineer"
+        }
+      ]
+    },
+    {
+      "name": "data-ai-context-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["machine-learning", "data", "ai", "python", "tensorflow", "ml", "data-science"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "data-ai-specialist"
+        }
+      ]
+    },
+    {
+      "name": "architecture-context-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["architecture", "system-design", "pattern", "scalability", "microservices"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "software-architect"
+        }
+      ]
+    },
+    {
+      "name": "leadership-context-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["management", "leadership", "team", "mentoring", "career", "product"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "engineering-leader"
+        }
+      ]
+    },
+    {
+      "name": "emerging-tech-router",
+      "trigger": "message_analysis",
+      "conditions": {
+        "contains_keywords": ["blockchain", "web3", "game", "ai-agent", "prompt", "emerging"]
+      },
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "emerging-tech-specialist"
+        }
+      ]
+    },
+    {
+      "name": "skill-auto-loader",
+      "description": "Automatically load relevant skills based on agent and context",
+      "trigger": "agent_invocation",
+      "actions": [
+        {
+          "type": "load_skill",
+          "matching_criteria": "agent_specialization"
+        }
+      ]
+    },
+    {
+      "name": "roadmap-link-provider",
+      "description": "Provide official roadmap links when users ask about roles",
+      "trigger": "message_analysis",
+      "conditions": {
+        "user_asks_about": ["role", "roadmap", "path", "career", "learning"]
+      },
+      "actions": [
+        {
+          "type": "append_resource",
+          "message": "Visit https://roadmap.sh to explore interactive roadmaps"
+        }
+      ]
+    },
+    {
+      "name": "related-roles-suggester",
+      "description": "Suggest related roles and career paths",
+      "trigger": "agent_response",
+      "actions": [
+        {
+          "type": "suggest_related",
+          "context": "related_roles"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "agent_routing_enabled": true,
+    "skill_auto_load": true,
+    "context_awareness": true,
+    "resource_linking": true
+  }
+}

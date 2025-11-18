@@ -1,31 +1,128 @@
 {
   "name": "developer-roadmap",
-  "displayName": "Developer Roadmap",
+  "displayName": "Developer Roadmap - 65+ Roles",
   "version": "1.0.0",
-  "description": "Interactive learning system for 65+ developer roles from the kamranahmedse/developer-roadmap repository",
+  "description": "Comprehensive learning system for 65+ developer roles with 7 specialized agents covering all major technology stacks and career paths",
   "author": "Developer Roadmap Community",
-  "keywords": ["roadmap", "learning", "developer", "career"],
+  "keywords": [
+    "roadmap",
+    "learning",
+    "developer",
+    "career",
+    "roles",
+    "paths",
+    "frontend",
+    "backend",
+    "devops",
+    "data",
+    "ai",
+    "leadership"
+  ],
   "repository": "https://github.com/kamranahmedse/developer-roadmap",
   "agents": [
     {
-      "name": "developer-roadmap-navigator",
-      "file": "agents/developer-roadmap-navigator.md"
+      "name": "frontend-web-specialist",
+      "file": "agents/01-frontend-web-specialist.md"
+    },
+    {
+      "name": "backend-api-architect",
+      "file": "agents/02-backend-api-architect.md"
+    },
+    {
+      "name": "devops-infrastructure-engineer",
+      "file": "agents/03-devops-infrastructure-engineer.md"
+    },
+    {
+      "name": "data-ai-specialist",
+      "file": "agents/04-data-ai-specialist.md"
+    },
+    {
+      "name": "software-architect",
+      "file": "agents/05-software-architect.md"
+    },
+    {
+      "name": "engineering-leader",
+      "file": "agents/06-engineering-leader.md"
+    },
+    {
+      "name": "emerging-tech-specialist",
+      "file": "agents/07-emerging-tech-specialist.md"
     }
   ],
   "commands": [
     {
-      "name": "roadmap",
-      "file": "commands/roadmap.md"
+      "name": "roadmap-start",
+      "file": "commands/01-roadmap-start.md"
     },
     {
-      "name": "start",
-      "file": "commands/start.md"
+      "name": "roadmap-browse",
+      "file": "commands/02-roadmap-browse.md"
+    },
+    {
+      "name": "roadmap-role",
+      "file": "commands/03-roadmap-role.md"
+    },
+    {
+      "name": "roadmap-resources",
+      "file": "commands/04-roadmap-resources.md"
     }
   ],
   "skills": [
     {
-      "name": "roadmap-learning",
-      "file": "skills/roadmap-learning/SKILL.md"
+      "name": "frontend-frameworks",
+      "file": "skills/frontend/01-frameworks/SKILL.md"
+    },
+    {
+      "name": "frontend-languages",
+      "file": "skills/frontend/02-languages/SKILL.md"
+    },
+    {
+      "name": "frontend-performance",
+      "file": "skills/frontend/03-performance/SKILL.md"
+    },
+    {
+      "name": "backend-runtimes",
+      "file": "skills/backend/01-runtimes/SKILL.md"
+    },
+    {
+      "name": "backend-databases",
+      "file": "skills/backend/02-databases/SKILL.md"
+    },
+    {
+      "name": "backend-apis",
+      "file": "skills/backend/03-apis/SKILL.md"
+    },
+    {
+      "name": "devops-containers",
+      "file": "skills/devops/01-containers/SKILL.md"
+    },
+    {
+      "name": "devops-orchestration",
+      "file": "skills/devops/02-orchestration/SKILL.md"
+    },
+    {
+      "name": "devops-cloud",
+      "file": "skills/devops/03-cloud/SKILL.md"
+    },
+    {
+      "name": "data-fundamentals",
+      "file": "skills/data-ai/01-fundamentals/SKILL.md"
+    },
+    {
+      "name": "data-ml-advanced",
+      "file": "skills/data-ai/02-ml-advanced/SKILL.md"
+    },
+    {
+      "name": "ai-engineering",
+      "file": "skills/data-ai/03-ai-engineering/SKILL.md"
+    },
+    {
+      "name": "architecture-patterns",
+      "file": "skills/architecture/01-patterns/SKILL.md"
+    },
+    {
+      "name": "architecture-systems",
+      "file": "skills/architecture/02-systems/SKILL.md"
     }
   ]
 }
