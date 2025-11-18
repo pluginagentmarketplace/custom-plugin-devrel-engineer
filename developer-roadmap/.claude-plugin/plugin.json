@@ -1,0 +1,31 @@
+{
+  "name": "developer-roadmap",
+  "displayName": "Developer Roadmap",
+  "version": "1.0.0",
+  "description": "Interactive learning system for 65+ developer roles from the kamranahmedse/developer-roadmap repository",
+  "author": "Developer Roadmap Community",
+  "keywords": ["roadmap", "learning", "developer", "career"],
+  "repository": "https://github.com/kamranahmedse/developer-roadmap",
+  "agents": [
+    {
+      "name": "developer-roadmap-navigator",
+      "file": "agents/developer-roadmap-navigator.md"
+    }
+  ],
+  "commands": [
+    {
+      "name": "roadmap",
+      "file": "commands/roadmap.md"
+    },
+    {
+      "name": "start",
+      "file": "commands/start.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "roadmap-learning",
+      "file": "skills/roadmap-learning/SKILL.md"
+    }
+  ]
+}
