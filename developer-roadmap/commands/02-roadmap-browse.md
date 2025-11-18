@@ -1,182 +1,258 @@
-# /roadmap-browse - Explore All Developer Roles
+# /roadmap-browse - Explore 65+ Developer Roles
 
-Browse and discover all 65+ developer roles available in the roadmap. Find your perfect career path.
+Discover which developer role interests you. Browse all available paths across 7 major technology categories.
 
-## 7 Major Categories
+---
 
-### 1. Frontend & Web Development (10+ roles)
-- Frontend Developer (General)
-- Frontend Developer (Beginner)
-- React Developer
+## 🎯 7 Major Categories
+
+### 1️⃣ **Frontend & Web Development** (10+ roles)
+
+Build beautiful, interactive user interfaces.
+
+**Popular Roles:**
+- Frontend Developer ← Most beginner-friendly
+- React Developer (highest demand)
 - Vue.js Developer
 - Angular Developer
 - Next.js Developer
 - React Native Developer
-- Web Performance Specialist
-- Accessibility Specialist
-- Design System Developer
 
-### 2. Backend & API Development (12+ roles)
-- Backend Developer (General)
-- Backend Developer (Beginner)
+**What You'll Learn**: JavaScript, HTML, CSS, frameworks, performance, accessibility
+**Job Market**: 🔥 Very hot - 20K+ openings
+**Salary Range**: $50K-$160K+
+**Time to Proficiency**: 6-12 months
+
+👉 **Learn More**: `/roadmap-role frontend`
+
+---
+
+### 2️⃣ **Backend & API Development** (12+ roles)
+
+Build robust server-side systems and APIs.
+
+**Popular Roles:**
+- Backend Developer ← Most versatile
 - Node.js Developer
 - Python Developer
 - Java Developer
 - Go Developer
-- Rust Developer
-- Spring Boot Developer
-- PHP Developer
-- API Designer
-- Database Architect
-- Microservices Architect
 
-### 3. DevOps & Infrastructure (10+ roles)
-- DevOps Engineer (General)
-- DevOps Engineer (Beginner)
-- Docker Specialist
-- Kubernetes Specialist
-- AWS Specialist
-- Google Cloud Specialist
-- Azure Specialist
-- Terraform Specialist
-- Linux Administrator
-- Site Reliability Engineer (SRE)
+**What You'll Learn**: APIs, databases, authentication, scaling, microservices
+**Job Market**: 🔥 Very hot - 25K+ openings
+**Salary Range**: $60K-$180K+
+**Time to Proficiency**: 6-12 months
 
-### 4. Data & AI Engineering (12+ roles)
-- Data Scientist
-- Machine Learning Engineer
-- AI Engineer
-- Data Engineer
-- MLOps Engineer
-- Data Analyst
-- BI Analyst
-- AI Red Team Specialist
-- AI Agents Developer
-- Prompt Engineer
-- Analytics Engineer
-- Data Architect
-
-### 5. Software Architecture & Design (8+ roles)
-- Software Architect
-- System Design Specialist
-- Enterprise Architect
-- Solutions Architect
-- Tech Lead
-- Staff Engineer
-- Blockchain Architect
-- Cyber Security Architect
-
-### 6. Engineering Leadership (8+ roles)
-- Engineering Manager
-- Engineering Director
-- Product Manager
-- DevRel Engineer
-- Technical Writer
-- QA Engineer
-- UX Designer
-- Scrum Master
-
-### 7. Emerging Technologies & Specialized (10+ roles)
-- Blockchain Developer
-- Game Developer
-- Swift/iOS Developer
-- Flutter Developer
-- Kotlin/Android Developer
-- C++ Developer
-- AI Safety Researcher
-- IoT Developer
-- VR/AR Developer
-- Prompt Engineer
-
-## How to Choose
-
-### By Interest
-- What technologies excite you?
-- What problems do you enjoy solving?
-- What impact do you want to make?
-
-### By Market Demand
-- Job availability in your region
-- Salary expectations
-- Company needs
-- Growth prospects
-
-### By Skills You Have
-- Programming experience
-- Problem-solving ability
-- Domain knowledge
-- Learning style
-
-### By Career Goals
-- Individual contributor path?
-- Leadership path?
-- Specialization?
-- Domain switching?
-
-## Popular Starting Roles
-
-**Most In-Demand:**
-1. Frontend Developer
-2. Backend Developer
-3. Full Stack Developer
-4. DevOps Engineer
-5. Data Scientist
-
-**Emerging Roles:**
-1. AI Engineer
-2. Prompt Engineer
-3. Blockchain Developer
-4. MLOps Engineer
-5. AI Agents Developer
-
-## Finding Your Roadmap
-
-1. Go to **https://roadmap.sh**
-2. Click on your role of interest
-3. View the interactive roadmap
-4. Explore required skills
-5. Check learning resources
-6. Check community insights
-
-## Each Roadmap Includes
-
-✅ Visual skill progression
-✅ Beginner to advanced path
-✅ Curated resource links
-✅ Community ratings
-✅ Time estimates
-✅ Related roles
-✅ Skill prerequisites
-
-## Key Decision Factors
-
-| Factor | Frontend | Backend | DevOps | Data |
-|--------|----------|---------|--------|------|
-| Creative | ⭐⭐⭐ | ⭐ | ⭐ | ⭐⭐ |
-| Logical | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Math | ⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| People | ⭐ | ⭐ | ⭐⭐ | ⭐ |
-
-## Learning Resources by Category
-
-**Books & Courses**
-- Official documentation
-- Udemy & Coursera
-- Frontend Masters
-- Pluralsight
-
-**Interactive**
-- Interactive tutorials
-- Code challenges
-- Hands-on projects
-- Community forums
-
-**Community**
-- Discord servers
-- Reddit communities
-- Stack Overflow
-- GitHub discussions
+👉 **Learn More**: `/roadmap-role backend`
 
 ---
 
-**Ready to explore?** Visit https://roadmap.sh to see all roadmaps!
+### 3️⃣ **DevOps & Cloud Infrastructure** (10+ roles)
+
+Manage and deploy applications at scale.
+
+**Popular Roles:**
+- DevOps Engineer
+- Kubernetes Specialist
+- AWS Specialist
+- Cloud Architect
+- Site Reliability Engineer (SRE)
+
+**What You'll Learn**: Docker, Kubernetes, AWS, CI/CD, monitoring, infrastructure
+**Job Market**: 🔥 Very hot - 15K+ openings
+**Salary Range**: $70K-$200K+
+**Time to Proficiency**: 9-18 months
+
+👉 **Learn More**: `/roadmap-role devops`
+
+---
+
+### 4️⃣ **Data & AI Engineering** (12+ roles)
+
+Build intelligent systems with data and AI.
+
+**Popular Roles:**
+- Data Scientist
+- Machine Learning Engineer ← Growing fastest
+- Data Engineer
+- AI Engineer
+- Analytics Engineer
+
+**What You'll Learn**: Python, ML, SQL, data pipelines, statistics, deep learning
+**Job Market**: 🔥 Extremely hot - AI boom
+**Salary Range**: $70K-$200K+
+**Time to Proficiency**: 12-18 months
+
+👉 **Learn More**: `/roadmap-role data-ai`
+
+---
+
+### 5️⃣ **Software Architecture & Design** (8+ roles)
+
+Design large-scale systems.
+
+**Popular Roles:**
+- Software Architect
+- System Design Specialist
+- Solutions Architect
+- Tech Lead
+
+**What You'll Learn**: System design, patterns, scalability, distributed systems
+**Job Market**: 🔥 Strong - for experienced devs
+**Salary Range**: $100K-$250K+
+**Time to Proficiency**: 12-24 months (after 5+ yrs experience)
+
+👉 **Learn More**: `/roadmap-role architecture`
+
+---
+
+### 6️⃣ **Engineering Leadership** (8+ roles)
+
+Lead technical teams and drive strategy.
+
+**Popular Roles:**
+- Engineering Manager
+- Tech Lead
+- Product Manager
+- DevRel Engineer
+
+**What You'll Learn**: Management, mentoring, communication, product strategy
+**Job Market**: 🔥 Strong - for technical leaders
+**Salary Range**: $80K-$250K+
+**Time to Proficiency**: Varies (usually after 5+ years)
+
+👉 **Learn More**: `/roadmap-role leadership`
+
+---
+
+### 7️⃣ **Emerging Technologies** (10+ roles)
+
+Explore cutting-edge innovations.
+
+**Popular Roles:**
+- Blockchain Developer
+- Game Developer
+- AI Agent Developer ← Newest & fastest-growing
+- Prompt Engineer ← Brand new field
+- AI/ML Specialist
+
+**What You'll Learn**: Blockchain, Web3, game engines, AI agents, modern tech
+**Job Market**: 🔥 Hot but niche - rapidly growing
+**Salary Range**: $60K-$180K+
+**Time to Proficiency**: 6-18 months
+
+👉 **Learn More**: `/roadmap-role emerging`
+
+---
+
+## 📊 Quick Comparison
+
+| Factor | Frontend | Backend | DevOps | Data | Arch | Leader | Emerging |
+|--------|----------|---------|--------|------|------|--------|----------|
+| **Difficulty** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| **Job Market** | 🔥🔥🔥 | 🔥🔥🔥 | 🔥🔥 | 🔥🔥🔥 | 🔥 | 🔥🔥 | 🔥🔥 |
+| **Salary** | $$$ | $$$ | $$$ | $$$ | $$$$ | $$$ | $$ |
+| **Time to Job** | 6 mo | 8 mo | 12 mo | 12 mo | 24 mo | Varies | 8 mo |
+| **Remote-Friendly** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+---
+
+## 🎓 How to Choose
+
+### Choose Frontend If You...
+✅ Like visual, creative work
+✅ Enjoy user interaction design
+✅ Want quick feedback
+✅ Prefer JavaScript ecosystem
+✅ Want most job opportunities
+
+### Choose Backend If You...
+✅ Like logical problem-solving
+✅ Enjoy databases & APIs
+✅ Want flexibility in language
+✅ Prefer steady, predictable work
+✅ Like building infrastructure
+
+### Choose DevOps If You...
+✅ Like systems & automation
+✅ Enjoy troubleshooting
+✅ Want high demand/pay
+✅ Like infrastructure work
+✅ Enjoy operational excellence
+
+### Choose Data/AI If You...
+✅ Like statistics & math
+✅ Want fastest-growing field
+✅ Enjoy working with data
+✅ Interested in AI/ML
+✅ Want highest salaries (AI)
+
+### Choose Architecture If You...
+✅ Have 5+ years experience
+✅ Enjoy system design
+✅ Want to solve large-scale problems
+✅ Like mentoring others
+✅ Want highest pay
+
+### Choose Leadership If You...
+✅ Have strong communication skills
+✅ Enjoy developing people
+✅ Want to lead teams
+✅ Like strategic thinking
+✅ Want management path
+
+### Choose Emerging If You...
+✅ Love new technologies
+✅ Want to pioneer new fields
+✅ Willing to take risk
+✅ Interested in future tech
+✅ Want to be trendsetter
+
+---
+
+## 📈 Career Growth Paths
+
+**Frontend → Backend → Architecture**
+(Learn full-stack perspective)
+
+**Backend → DevOps → Architecture**
+(Learn infrastructure & scale)
+
+**Any Role → Leadership**
+(Natural progression with experience)
+
+**Developer → Data/AI**
+(Specialization path)
+
+**Multiple Roles → Architecture**
+(Broad perspective)
+
+---
+
+## 🚀 Next Steps
+
+**Leaning towards a role?**
+👉 Run `/roadmap-role [your-interest]` to get:
+- Complete skill requirements
+- Learning timeline
+- Salary expectations
+- Related roles
+- Interview prep tips
+
+**Want to explore options more?**
+👉 Run `/roadmap-resources` to find learning materials
+
+**Ready to start learning?**
+👉 Run `/roadmap-start` for setup guide
+
+---
+
+## 💡 Remember
+
+✅ **No wrong choice** - All roles are valuable
+✅ **Can switch later** - Learn fundamentals first
+✅ **Combine skills** - Frontend + Backend = Full Stack
+✅ **Follow passion** - Interested > Lucrative
+✅ **Market matters** - Demand + interest = sweet spot
+
+**What interests you most?**

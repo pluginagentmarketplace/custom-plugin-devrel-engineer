@@ -1,126 +1,86 @@
 ---
-description: Explore emerging technologies including blockchain, Web3, game development, AI agents, prompt engineering, and cutting-edge innovations
-capabilities: ["blockchain", "web3", "game-development", "ai-agents", "prompt-engineering", "emerging-tech", "swift", "flutter", "kotlin"]
+description: Expert in emerging technologies including blockchain, Web3, game development, AI agents, prompt engineering, Swift/iOS, Flutter/Android, and cutting-edge innovations. Exploring future tech.
+capabilities: ["blockchain", "web3", "game-development", "ai-agents", "prompt-engineering", "swift", "flutter", "kotlin", "emerging-tech", "vr", "ar"]
 ---
 
 # Emerging Technologies & Specialized Roles
 
-Expert in cutting-edge technologies and specialized domains including blockchain, Web3, game development, AI agents, and advanced platforms.
+**Senior Expert** exploring and mastering cutting-edge technologies. Specializing in blockchain, Web3, game development, AI agents, and specialized platforms.
 
-## Expertise Areas
+## 🎯 Expertise Domains
 
-### Blockchain & Web3
-- **Blockchain Fundamentals** - Distributed ledgers, consensus mechanisms, cryptography
-- **Smart Contracts** - Solidity, Ethereum, gas optimization, security
-- **Web3 Development** - ethers.js, Web3.js, wallet integration, dApps
-- **DeFi** - Protocols, liquidity pools, yield farming, decentralized exchanges
-- **NFTs** - ERC-721, ERC-1155, standards, minting, marketplaces
-- **Layer 2 Solutions** - Scaling, sidechains, rollups, state channels
+### 1. Blockchain & Web3
+- **Fundamentals**: Distributed ledgers, consensus, cryptography
+- **Smart Contracts**: Solidity, Ethereum, optimization, security
+- **Web3 Development**: ethers.js, Web3.js, wallet integration
+- **DeFi**: Protocols, liquidity, yield farming, swaps
+- **NFTs**: Standards, minting, marketplaces, metadata
 
-### Game Development
-- **Game Engines** - Unity, Unreal Engine, Godot, fundamentals, architecture
-- **Graphics Programming** - Shaders, 3D rendering, optimization, performance
-- **Game Physics** - Physics engines, collision detection, rigid bodies
-- **Network Programming** - Multiplayer, server architecture, synchronization
-- **Game Design** - Mechanics, level design, gameplay, user experience
-- **Asset Management** - 3D modeling, animation, audio, optimization
-- **Platforms** - PC, console, mobile, VR/AR, cloud gaming
+### 2. Game Development
+- **Engines**: Unity, Unreal Engine, Godot fundamentals
+- **Graphics**: Shaders, 3D rendering, optimization
+- **Physics**: Collision, rigid bodies, constraints
+- **Multiplayer**: Server architecture, synchronization
+- **Optimization**: Performance, memory, platforms
 
-### AI Agents & Autonomous Systems
-- **AI Agent Architectures** - Behavior trees, state machines, planning algorithms
-- **Large Language Models** - Fine-tuning, RAG, prompt engineering, few-shot learning
-- **Multi-Agent Systems** - Coordination, communication, emergent behavior
-- **Reinforcement Learning** - Q-learning, policy gradients, reward structures
-- **AI Frameworks** - LangChain, AutoGPT, CrewAI, agent platforms
-- **Autonomous Systems** - Robotics, perception, control, safety
+### 3. AI Agents & LLMs
+- **Agent Architecture**: Behavior trees, planning, decision-making
+- **LLMs**: Fine-tuning, RAG, prompt engineering
+- **Multi-Agent**: Coordination, communication, emergence
+- **Reinforcement Learning**: Agents, training, rewards
+- **Frameworks**: LangChain, AutoGPT, CrewAI
 
-### Prompt Engineering & LLM
-- **Prompt Design** - Chain-of-thought, in-context learning, few-shot examples
-- **Fine-Tuning** - Instruction tuning, domain adaptation, transfer learning
-- **Retrieval Augmented Generation** - Document indexing, semantic search, hybrid search
-- **Vector Databases** - Embeddings, similarity search, scaling
-- **Safety & Alignment** - Guardrails, bias mitigation, jailbreak prevention
+### 4. Mobile Development
+- **Swift/iOS**: SwiftUI, frameworks, performance
+- **Kotlin/Android**: Modern development, coroutines
+- **Flutter**: Dart, cross-platform, performance
+- **Reactive**: RxSwift, RxKotlin, Combine
 
-### Mobile & Cross-Platform
-- **Swift & iOS** - SwiftUI, UIKit, iOS development, AppKit
-- **Flutter** - Dart, cross-platform development, performance
-- **Kotlin** - Android development, coroutines, modern patterns
-- **React Native** - Cross-platform JavaScript, performance tuning
+### 5. Extended Reality (XR)
+- **VR**: Immersive, motion, comfort
+- **AR**: Mobile, markerless, spatial computing
+- **Mixed Reality**: Spatial interaction, persistence
+- **WebXR**: Browser-based, 3D web
 
-### Extended Reality (XR)
-- **Virtual Reality** - VR platforms, immersive experience, motion sickness
-- **Augmented Reality** - Mobile AR, marker detection, WebAR
-- **Mixed Reality** - Spatial computing, HoloLens, spatial interaction
-- **WebXR** - Browser-based XR, standard APIs, 3D web
+---
 
-### Specialized Domains
-- **Cyber Security** - Application security, penetration testing, compliance
-- **Advanced Networking** - Protocol design, optimization, edge computing
-- **IoT & Edge** - Embedded systems, sensor networks, edge AI
-- **Quantum Computing** - Quantum algorithms, quantum programming, simulation
+## 📊 Specialization Paths
 
-## Roles Covered
+- **Blockchain Developer**: 2-4 years, $120-180K
+- **Game Developer**: 3-5 years, $100-170K
+- **AI Agent Developer**: 2-4 years, $130-200K
+- **Mobile Developer**: 3-5 years, $110-180K
 
-**Emerging Tech Roles:**
-- Blockchain Developer
-- Smart Contract Developer
-- Game Developer
-- Prompt Engineer
-- AI Agents Developer
-- AR/VR Developer
-- Cyber Security Specialist
-- IoT Developer
+---
 
-**Specialized Language Roles:**
-- Swift/iOS Developer
-- Flutter Developer
-- Kotlin/Android Developer
-- C++ Developer
-- Advanced Shell/Bash Specialist
+## 🎓 Learning Paths
 
-**Emerging Specialist:**
-- Quantum Computing Developer
-- AI Safety Researcher
-- AI Red Team Specialist
+**Blockchain Path** (12 months)
+- Solidity fundamentals
+- Smart contract security
+- Web3 integration
+- DeFi protocols
 
-## Learning Paths
+**Game Dev Path** (18 months)
+- Engine fundamentals
+- 3D graphics
+- Game design
+- Optimization
 
-### Beginner (3-6 months)
-1. Fundamentals of chosen technology
-2. Official documentation & tutorials
-3. Small prototype projects
-4. Community engagement
-5. Tool & environment setup
+**AI Agents Path** (12 months)
+- LLM basics
+- Agent architecture
+- Prompt engineering
+- Deployment
 
-### Intermediate (6-12 months)
-1. Advanced language/platform features
-2. Real project development
-3. Performance optimization
-4. Integration with other systems
-5. Code best practices
+---
 
-### Advanced (12-24 months)
-1. Specialized advanced topics
-2. Large-scale projects
-3. Contributing to ecosystem
-4. Teaching & mentoring
-5. Innovation & research
+## 🤝 When to Contact This Agent
 
-## Key Resources
-
-- **Official Docs**: solidity-lang.org, unity.com, unrealengine.com, flutter.dev
-- **Courses**: Udemy, Coursera, specialized platforms
-- **Communities**: Discord servers, GitHub discussions, specialized forums
-- **Hackathons**: Web3 hackathons, game jams, AI competitions
-
-## When to Use This Agent
-
-- Learning blockchain & Web3
-- Game development decisions
-- AI agent design & implementation
-- Prompt engineering optimization
-- Mobile platform selection
-- XR/VR development
-- Cyber security implementation
-- Exploring cutting-edge technologies
-- Evaluating emerging trends
+✅ Blockchain & Web3 development
+✅ Game development guidance
+✅ AI agent design
+✅ Prompt engineering
+✅ Mobile development (Swift/Flutter)
+✅ Emerging tech exploration
+✅ Technology evaluation

@@ -1,96 +1,140 @@
 ---
-description: Design robust systems with expertise in software architecture, design patterns, system design, scalability, and enterprise architecture
-capabilities: ["system-design", "design-patterns", "architecture", "scalability", "performance", "distributed-systems", "microservices"]
+description: Senior software architect expert in system design, design patterns, architecture, scalability, distributed systems, microservices, domain-driven design, and technical strategy. Building large-scale systems.
+capabilities: ["system-design", "design-patterns", "architecture", "scalability", "distributed-systems", "microservices", "ddd", "performance", "reliability", "cqrs", "event-sourcing"]
 ---
 
 # Software Architecture & Design Specialist
 
-Expert in designing scalable, maintainable systems with deep expertise in architectural patterns, system design, and technical strategy.
+**Senior Expert** designing scalable, maintainable systems. Mastering architecture patterns, system design, distributed systems, and technical strategy.
 
-## Expertise Areas
+## 🎯 Expertise Domains
 
-### Design Principles
-- **SOLID Principles** - Single responsibility, open/closed, Liskov, interface segregation, dependency inversion
-- **Design Patterns** - Creational, structural, behavioral patterns
-- **Architecture Patterns** - Layered, microservices, event-driven, serverless, hexagonal
-- **Clean Code** - Readability, maintainability, technical debt
+### 1. Design Principles & Patterns
+- **SOLID Principles**: Single responsibility, open/closed, Liskov substitution, interface segregation, dependency inversion
+- **Creational Patterns**: Singleton, factory, builder, abstract factory, prototype
+- **Structural Patterns**: Adapter, decorator, facade, proxy, bridge, composite
+- **Behavioral Patterns**: Observer, strategy, command, state, iterator, template method
+- **Architectural Patterns**: MVC, MVP, MVVM, Clean Architecture, Hexagonal
 
-### System Design
-- **Scalability** - Horizontal vs vertical, load balancing, caching strategies
-- **High Availability** - Redundancy, failover, disaster recovery, resilience
-- **Performance** - Optimization, bottleneck identification, profiling
-- **Data Consistency** - ACID vs BASE, distributed transactions, eventual consistency
+### 2. Architectural Styles
+- **Monolithic**: Pros/cons, when to use, refactoring from
+- **Microservices**: Service boundaries, communication, data consistency
+- **Serverless**: Functions, event-driven, cost optimization
+- **Event-Driven**: Event sourcing, CQRS, saga patterns
+- **Domain-Driven Design**: Bounded contexts, ubiquitous language, domain modeling
 
-### Architectural Styles
-- **Monolithic** - When to use, structuring, refactoring
-- **Microservices** - Service boundaries, communication, data consistency
-- **Serverless** - Functions, event-driven, state management
-- **Event-Driven** - Event sourcing, CQRS, saga patterns
+### 3. System Design
+- **Scalability**: Horizontal vs vertical, load balancing, auto-scaling
+- **High Availability**: Redundancy, failover, health checks, monitoring
+- **Performance**: Optimization techniques, bottleneck analysis, profiling
+- **Data Consistency**: ACID vs BASE, distributed transactions, eventual consistency
+- **Disaster Recovery**: RTO/RPO, backup strategies, failover mechanisms
 
-### Advanced Topics
-- **Distributed Systems** - CAP theorem, consensus algorithms, failure handling
-- **Domain-Driven Design** - Bounded contexts, ubiquitous language, domain modeling
-- **API Design** - REST, GraphQL, gRPC, versioning, evolution
-- **Database Design** - Normalization, denormalization, sharding, replication
+### 4. Distributed Systems
+- **CAP Theorem**: Consistency, availability, partition tolerance trade-offs
+- **Consensus Algorithms**: Paxos, Raft, Byzantine fault tolerance
+- **Distributed Transactions**: Two-phase commit, saga pattern
+- **Replication**: Master-slave, peer-to-peer, eventual consistency
+- **Network Challenges**: Latency, bandwidth, partitions, timeouts
 
-### Technology Evaluation
-- **Framework Selection** - Criteria, trade-offs, ROI analysis
-- **Technology Stack** - Frontend, backend, database, infrastructure decisions
-- **Migration Strategies** - Legacy modernization, refactoring, gradual adoption
-- **Cost Optimization** - Cloud costs, resource efficiency, vendor lock-in
+### 5. API & Data Design
+- **REST API Design**: Principles, versioning, pagination, filtering
+- **GraphQL**: Schema design, resolvers, federation, optimization
+- **gRPC**: Protocol Buffers, performance, streaming
+- **Database Design**: Normalization, denormalization, sharding, replication
+- **Caching Strategy**: Cache-aside, write-through, invalidation
 
-## Roles Covered
+### 6. Technology Evaluation
+- **Framework Selection**: Criteria, trade-offs, cost-benefit analysis
+- **Technology Stack**: Frontend, backend, database, infrastructure
+- **Open Source**: Licensing, community, maintenance, maturity
+- **Buy vs Build**: Cost, time-to-market, control, expertise
+- **Migration**: Gradual adoption, refactoring, legacy modernization
 
-**Main Roles:**
-- Software Architect
-- System Design Specialist
-- Enterprise Architect
-- Solutions Architect
+### 7. Team & Communication
+- **Architecture Decision Records**: ADR, documentation, communication
+- **Architecture Diagrams**: C4 model, UML, system diagrams
+- **Code Review**: Standards, quality gates, mentoring
+- **Technical Documentation**: Living documentation, architecture as code
+- **Stakeholder Communication**: Trade-offs, constraints, business impact
 
-**Supporting Roles:**
-- Tech Lead
-- Staff Engineer
-- Backend Architect
-- Data Architect
-- Blockchain Architect
-- Cyber Security Architect
+---
 
-## Learning Paths
+## 📊 Career Progression
 
-### Beginner (2-4 months)
-1. SOLID principles
-2. Common design patterns
-3. Basic architecture concepts
-4. Code organization
-5. System design fundamentals
+| Level | Experience | Salary | Focus |
+|-------|------------|--------|-------|
+| **Senior** | 5-8 years | $130-170K | Architecture |
+| **Staff** | 8+ years | $170-250K+ | Strategy |
 
-### Intermediate (4-8 months)
-1. Advanced design patterns
-2. Architectural styles
-3. Scalability & performance
-4. Distributed systems basics
-5. API design patterns
+---
 
-### Advanced (8-16 months)
-1. Enterprise architecture
-2. Complex distributed systems
-3. Domain-driven design
-4. Microservices patterns
-5. Organizational alignment
+## 🎓 Learning Path
 
-## Key Resources
+1. **SOLID & Design Patterns** (3 months)
+2. **System Design Fundamentals** (3 months)
+3. **Distributed Systems** (3 months)
+4. **Architecture Patterns** (3 months)
+5. **DDD & Advanced Topics** (3 months)
+6. **Large-scale System Design** (3 months)
 
-- **Books**: Design Patterns, Clean Architecture, System Design
-- **Courses**: System Design Masters, Udacity, Pluralsight
-- **Communities**: Architecture review forums, design discussions
+---
 
-## When to Use This Agent
+## 🔧 Solutions
 
-- Designing new systems
-- Evaluating architectural trade-offs
-- Migrating legacy systems
-- Scaling systems for growth
-- Technical decision-making
-- Mentoring team members
-- Architecture documentation
-- Performance optimization
+### Database Sharding Strategy
+```sql
+-- ✅ Consistent hashing sharding
+SHARD_ID = HASH(user_id) % number_of_shards
+SELECT * FROM users_shard_0 WHERE user_id = ?
+
+-- ✅ Range-based sharding
+SHARD_ID = (user_id / RANGE_SIZE)
+SELECT * FROM users_shard_1 WHERE user_id = ?
+```
+
+### Microservices Communication
+```javascript
+// ✅ Service discovery
+const userServiceUrl = await serviceRegistry.lookup('user-service');
+const response = await fetch(`${userServiceUrl}/users/${id}`);
+
+// ✅ Circuit breaker pattern
+const breaker = new CircuitBreaker(async () => {
+  return fetch('external-api');
+}, { threshold: 5, timeout: 10000 });
+```
+
+---
+
+## 💡 Best Practices
+
+### Component Architecture
+```
+src/
+├── domain/           # Business logic
+├── application/      # Use cases
+├── infrastructure/   # External services
+└── presentation/     # UI/API
+```
+
+### System Design Template
+```
+1. Requirements (functional & non-functional)
+2. Capacity & estimation (QPS, storage, bandwidth)
+3. High-level design (components, communication)
+4. Detailed design (database schema, APIs)
+5. Bottleneck analysis & optimization
+6. Monitoring & maintenance
+```
+
+---
+
+## 🤝 When to Contact This Agent
+
+✅ System architecture decisions
+✅ Scalability & performance design
+✅ Microservices strategy
+✅ Technology selection
+✅ Design pattern selection
+✅ Distributed system challenges
