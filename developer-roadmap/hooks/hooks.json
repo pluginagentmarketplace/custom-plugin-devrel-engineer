@@ -1,0 +1,232 @@
+{
+  "hooks": [
+    {
+      "id": "frontend-router",
+      "name": "Frontend Context Router",
+      "description": "Automatically route user queries about frontend to Frontend Agent",
+      "trigger": "message_analysis",
+      "patterns": ["react", "vue", "angular", "javascript", "typescript", "css", "html", "frontend", "web", "component", "jsx"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "frontend-web-specialist",
+          "confidence": 0.95
+        },
+        {
+          "type": "load_skill",
+          "skill": "frontend-frameworks",
+          "auto": true
+        },
+        {
+          "type": "suggest_next_action",
+          "action": "Browse frontend learning path"
+        }
+      ]
+    },
+    {
+      "id": "backend-router",
+      "name": "Backend Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["backend", "nodejs", "python", "java", "go", "api", "database", "sql", "mongodb", "rest", "graphql"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "backend-api-architect"
+        },
+        {
+          "type": "load_skills",
+          "skills": ["backend-runtimes", "backend-databases", "backend-apis"]
+        }
+      ]
+    },
+    {
+      "id": "devops-router",
+      "name": "DevOps Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["devops", "docker", "kubernetes", "aws", "terraform", "cicd", "deployment", "infrastructure", "cloud"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "devops-infrastructure-engineer"
+        },
+        {
+          "type": "load_skills",
+          "skills": ["devops-containers", "devops-orchestration", "devops-cloud"]
+        }
+      ]
+    },
+    {
+      "id": "data-ai-router",
+      "name": "Data & AI Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["machine learning", "data science", "ai", "python", "tensorflow", "pytorch", "ml", "deep learning", "data engineering"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "data-ai-specialist"
+        },
+        {
+          "type": "load_skills",
+          "skills": ["data-fundamentals", "data-ml-advanced", "ai-engineering"]
+        }
+      ]
+    },
+    {
+      "id": "architecture-router",
+      "name": "Architecture Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["architecture", "system design", "pattern", "scalability", "microservices", "distributed", "design pattern"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "software-architect"
+        },
+        {
+          "type": "load_skills",
+          "skills": ["architecture-patterns", "architecture-systems"]
+        }
+      ]
+    },
+    {
+      "id": "leadership-router",
+      "name": "Leadership Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["management", "leadership", "team", "mentoring", "career", "product", "communication", "organization"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "engineering-leader"
+        }
+      ]
+    },
+    {
+      "id": "emerging-router",
+      "name": "Emerging Tech Context Router",
+      "trigger": "message_analysis",
+      "patterns": ["blockchain", "web3", "game dev", "ai agent", "prompt engineering", "emerging", "nft", "swift", "flutter"],
+      "actions": [
+        {
+          "type": "suggest_agent",
+          "agent": "emerging-tech-specialist"
+        }
+      ]
+    },
+    {
+      "id": "skill-auto-loader",
+      "name": "Skill Auto-Loader",
+      "description": "Automatically load and suggest relevant skills based on agent and context",
+      "trigger": "agent_invocation",
+      "actions": [
+        {
+          "type": "load_skill",
+          "matching_criteria": "agent_specialization",
+          "priority": "high"
+        },
+        {
+          "type": "load_skill",
+          "matching_criteria": "user_query",
+          "priority": "medium"
+        }
+      ]
+    },
+    {
+      "id": "roadmap-link-provider",
+      "name": "Roadmap Link Provider",
+      "description": "Provide official roadmap.sh links when discussing roles",
+      "trigger": "message_analysis",
+      "patterns": ["roadmap", "learning path", "how to learn", "career path", "role"],
+      "actions": [
+        {
+          "type": "append_resource",
+          "message": "Official Roadmap: https://roadmap.sh",
+          "priority": "high"
+        }
+      ]
+    },
+    {
+      "id": "workflow-suggester",
+      "name": "Workflow Suggester",
+      "description": "Suggest next logical steps in learning workflow",
+      "trigger": "command_execution",
+      "patterns": ["start", "browse", "role", "resources"],
+      "actions": [
+        {
+          "type": "suggest_next_command",
+          "based_on": "current_command",
+          "logic": {
+            "start": "Browse roles with /roadmap-browse",
+            "browse": "Dive deep with /roadmap-role",
+            "role": "Find resources with /roadmap-resources",
+            "resources": "Start learning!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "progress-tracker",
+      "name": "Learning Progress Tracker",
+      "description": "Track and acknowledge learning progress",
+      "trigger": "milestone_completion",
+      "actions": [
+        {
+          "type": "log_milestone",
+          "include": ["timestamp", "milestone", "category"]
+        },
+        {
+          "type": "encourage",
+          "message": "Great progress! Keep going!"
+        }
+      ]
+    },
+    {
+      "id": "community-connector",
+      "name": "Community Connector",
+      "description": "Connect users with communities for support",
+      "trigger": "help_requested",
+      "actions": [
+        {
+          "type": "suggest_community",
+          "discord": "https://discord.gg/roadmapsh",
+          "github": "https://github.com/kamranahmedse/developer-roadmap"
+        }
+      ]
+    },
+    {
+      "id": "error-handler",
+      "name": "Smart Error Handler",
+      "description": "Help users understand and resolve errors with educational context",
+      "trigger": "error_detected",
+      "actions": [
+        {
+          "type": "explain_error",
+          "include": ["cause", "solution", "prevention", "related_skill"]
+        }
+      ]
+    },
+    {
+      "id": "interview-prep-suggester",
+      "name": "Interview Prep Suggester",
+      "description": "Suggest interview prep resources based on role",
+      "trigger": "keyword_match",
+      "keywords": ["interview", "prep", "job", "application"],
+      "actions": [
+        {
+          "type": "suggest_interview_topics",
+          "based_on": "user_role"
+        },
+        {
+          "type": "provide_practice_problems"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "agent_routing_enabled": true,
+    "skill_auto_load": true,
+    "context_awareness": true,
+    "workflow_suggestions": true,
+    "resource_linking": true,
+    "progress_tracking": true,
+    "community_integration": true
+  }
+}
