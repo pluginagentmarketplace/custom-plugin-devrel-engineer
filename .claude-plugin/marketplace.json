@@ -1,0 +1,10 @@
+{
+  "name": "custom-plugin-devrel-engineer",
+  "displayName": "Developer Roadmap Plugin",
+  "description": "Comprehensive learning system for 65+ developer roles with specialized agents for frontend, backend, DevOps, data/AI, and architecture",
+  "category": "education",
+  "tags": ["learning", "roadmap", "career", "development"],
+  "source": "./",
+  "verified": true,
+  "featured": false
+}

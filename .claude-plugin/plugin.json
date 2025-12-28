@@ -1,0 +1,55 @@
+{
+  "name": "developer-roadmap-plugin",
+  "version": "2.0.0",
+  "description": "Comprehensive learning system for 65+ developer roles with 7 specialized agents covering all major technology stacks and career paths",
+  "author": {
+    "name": "Dr. Umit Kacar & Muhsin Elcicek",
+    "email": "kacarumit.phd@gmail.com"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "roadmap",
+    "learning",
+    "developer",
+    "career",
+    "frontend",
+    "backend",
+    "devops",
+    "data-ai"
+  ],
+  "repository": {
+    "url": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer"
+  },
+  "agents": [
+    "./agents/01-frontend-web-specialist.md",
+    "./agents/02-backend-api-architect.md",
+    "./agents/03-devops-infrastructure-engineer.md",
+    "./agents/04-data-ai-specialist.md",
+    "./agents/05-software-architect.md",
+    "./agents/06-engineering-leader.md",
+    "./agents/07-emerging-tech-specialist.md"
+  ],
+  "commands": [
+    "./commands/01-roadmap-start.md",
+    "./commands/02-roadmap-browse.md",
+    "./commands/03-roadmap-role.md",
+    "./commands/04-roadmap-resources.md"
+  ],
+  "skills": [
+    "./skills/frontend/01-frameworks/SKILL.md",
+    "./skills/frontend/02-languages/SKILL.md",
+    "./skills/frontend/03-performance/SKILL.md",
+    "./skills/backend/01-runtimes/SKILL.md",
+    "./skills/backend/02-databases/SKILL.md",
+    "./skills/backend/03-apis/SKILL.md",
+    "./skills/devops/01-containers/SKILL.md",
+    "./skills/devops/02-orchestration/SKILL.md",
+    "./skills/devops/03-cloud/SKILL.md",
+    "./skills/data-ai/01-fundamentals/SKILL.md",
+    "./skills/data-ai/02-ml-advanced/SKILL.md",
+    "./skills/data-ai/03-ai-engineering/SKILL.md",
+    "./skills/architecture/01-patterns/SKILL.md",
+    "./skills/architecture/02-systems/SKILL.md"
+  ],
+  "hooks": "./hooks/hooks.json"
+}
