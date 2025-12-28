@@ -1,0 +1,140 @@
+# Sample Project README Template
+# Standard structure for example applications
+
+readme_structure:
+  title:
+    format: "Project Name - Brief Description"
+    example: "Acme API Quickstart - Python SDK Example"
+
+  badges:
+    recommended:
+      - license
+      - build_status
+      - sdk_version
+    optional:
+      - coverage
+      - dependencies
+
+  description:
+    content:
+      - what_it_does
+      - who_its_for
+      - key_features
+    length: 2-4 sentences
+
+  prerequisites:
+    always_include:
+      - language_version
+      - dependencies
+      - api_credentials
+    example: |
+      - Python 3.8+
+      - pip or poetry
+      - Acme API key (get one at dashboard.acme.com)
+
+  quickstart:
+    steps:
+      - clone_repo
+      - install_deps
+      - configure_env
+      - run_example
+    max_time: 5 minutes
+    example: |
+      1. Clone the repository
+         ```bash
+         git clone https://github.com/acme/quickstart-python
+         cd quickstart-python
+         ```
+
+      2. Install dependencies
+         ```bash
+         pip install -r requirements.txt
+         ```
+
+      3. Set up environment
+         ```bash
+         cp .env.example .env
+         # Edit .env with your API key
+         ```
+
+      4. Run the example
+         ```bash
+         python main.py
+         ```
+
+  project_structure:
+    format: tree_view
+    example: |
+      ```
+      quickstart-python/
+      ├── main.py           # Main entry point
+      ├── config.py         # Configuration
+      ├── examples/         # Additional examples
+      │   ├── basic.py
+      │   └── advanced.py
+      ├── .env.example      # Environment template
+      └── requirements.txt  # Dependencies
+      ```
+
+  configuration:
+    include:
+      - env_variables_table
+      - example_values
+      - security_notes
+
+  examples:
+    format: code_with_explanation
+    include:
+      - basic_usage
+      - common_patterns
+      - error_handling
+
+  troubleshooting:
+    common_issues:
+      - authentication_errors
+      - dependency_conflicts
+      - environment_setup
+
+  resources:
+    links:
+      - api_documentation
+      - sdk_reference
+      - support_channels
+
+  license:
+    recommended: MIT
+    location: bottom_of_readme
+
+env_example_template:
+  format: |
+    # Acme API Configuration
+    # Get your API key at: https://dashboard.acme.com/api-keys
+
+    # Required
+    ACME_API_KEY=your_api_key_here
+
+    # Optional
+    ACME_ENVIRONMENT=sandbox  # or 'production'
+    LOG_LEVEL=INFO
+
+  security_notes:
+    - "Never commit .env files"
+    - "Use environment variables in production"
+    - "Rotate keys regularly"
+
+code_comments:
+  guidelines:
+    - explain_why_not_what
+    - document_non_obvious_behavior
+    - link_to_docs_for_details
+    - use_consistent_style
+
+  example: |
+    # Initialize client with retry logic
+    # Retries handle transient network failures automatically
+    # See: https://docs.acme.com/sdk/configuration#retries
+    client = AcmeClient(
+        api_key=os.environ["ACME_API_KEY"],
+        max_retries=3,
+        timeout=30
+    )

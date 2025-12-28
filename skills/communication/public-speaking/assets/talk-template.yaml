@@ -1,0 +1,131 @@
+# Public Speaking Talk Template
+# Structure for developer conference presentations
+
+talk_structure:
+  opening:
+    duration: 2-3 minutes
+    elements:
+      - hook: "Grab attention immediately"
+      - credibility: "Brief intro (why should they listen)"
+      - roadmap: "What you'll cover (rule of three)"
+    examples:
+      hook_types:
+        - question: "How many of you have shipped a bug to production?"
+        - statistic: "90% of developers experience burnout"
+        - story: "Last month, our API went down for 6 hours..."
+        - demo: "Watch what happens when I click this button"
+
+  body:
+    duration: 15-25 minutes
+    structure:
+      point_1:
+        - introduce_concept
+        - explain_why_it_matters
+        - show_example_or_demo
+        - summarize_takeaway
+
+      point_2:
+        - build_on_point_1
+        - deeper_dive
+        - code_example
+        - common_pitfalls
+
+      point_3:
+        - advanced_topic
+        - real_world_application
+        - live_demo_if_possible
+        - resources_for_more
+
+  closing:
+    duration: 2-3 minutes
+    elements:
+      - recap: "Three things to remember"
+      - call_to_action: "What they should do next"
+      - resources: "Where to learn more"
+      - thanks: "Thank you + how to reach you"
+
+slide_design:
+  principles:
+    - one_idea_per_slide
+    - max_6_words_title
+    - visuals_over_text
+    - code_with_highlighting
+    - high_contrast_colors
+
+  font_sizes:
+    title: 48pt
+    body: 32pt
+    code: 24pt
+    minimum: 24pt
+
+  code_slides:
+    max_lines: 15
+    highlight_changes: true
+    use_syntax_highlighting: true
+    avoid_scroll: true
+
+timing_guidelines:
+  lightning_5min:
+    slides: 5-7
+    points: 1
+    demo: none
+    qa: none
+
+  standard_30min:
+    slides: 20-30
+    points: 3
+    demo: 1-2_short
+    qa: 5min
+
+  keynote_60min:
+    slides: 40-50
+    points: 3-5
+    demo: 2-3_substantial
+    qa: 10min
+
+  workshop_2hr:
+    slides: 30-40
+    exercises: 3-5
+    demo: multiple
+    qa: ongoing
+
+qa_handling:
+  preparation:
+    - anticipate_10_questions
+    - prepare_backup_slides
+    - know_your_limits
+    - have_resources_ready
+
+  techniques:
+    repeat_question: "So the question is about..."
+    buy_time: "That's a great question..."
+    redirect: "That's a bit outside scope, but..."
+    defer: "Let's chat after, happy to dive deep"
+    unknown: "I'm not sure, but I'll find out and share"
+
+  difficult_questions:
+    hostile: "Stay calm, acknowledge valid points"
+    irrelevant: "Interesting, let's discuss offline"
+    too_deep: "Great topic for a future talk"
+    correction: "Thanks for the correction, you're right"
+
+nervousness_management:
+  before_talk:
+    - arrive_30min_early
+    - test_all_equipment
+    - walk_the_stage
+    - do_voice_warmups
+    - visualize_success
+
+  during_talk:
+    - have_water_visible
+    - use_speaker_notes
+    - make_eye_contact
+    - move_purposefully
+    - pause_for_emphasis
+
+  recovery_techniques:
+    forgot_point: "Use your notes, pause is OK"
+    demo_fails: "Have backup screenshots"
+    lost_place: "Ask where you were"
+    heckler: "Acknowledge, redirect to topic"

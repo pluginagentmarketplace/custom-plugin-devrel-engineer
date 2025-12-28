@@ -1,0 +1,177 @@
+# DevRel Metrics Dashboard Template
+# KPIs and tracking for developer programs
+
+north_star_metrics:
+  options:
+    - developer_activation_rate
+    - monthly_active_developers
+    - time_to_first_api_call
+    - developer_nps
+  selection_criteria: |
+    Choose ONE metric that best represents overall program health.
+    This should be what you'd check first every morning.
+
+funnel_metrics:
+  awareness:
+    metrics:
+      - social_impressions
+      - blog_page_views
+      - brand_mentions
+      - share_of_voice
+    tools:
+      - google_analytics
+      - social_analytics
+      - brand24
+
+  acquisition:
+    metrics:
+      - website_visitors
+      - signup_rate
+      - docs_visitors
+      - trial_starts
+    tools:
+      - google_analytics
+      - segment
+      - amplitude
+
+  activation:
+    metrics:
+      - first_api_call_rate
+      - tutorial_completion
+      - time_to_hello_world
+      - sdk_installations
+    tools:
+      - product_analytics
+      - npm_downloads
+      - api_logs
+
+  retention:
+    metrics:
+      - mau_developers
+      - dau_developers
+      - api_calls_per_user
+      - feature_stickiness
+    tools:
+      - product_analytics
+      - internal_dashboards
+
+  revenue:
+    metrics:
+      - free_to_paid_conversion
+      - expansion_revenue
+      - pipeline_influenced
+    tools:
+      - salesforce
+      - hubspot
+      - internal_crm
+
+community_dashboard:
+  health_score:
+    components:
+      - growth_rate: 25%
+      - engagement_rate: 25%
+      - response_time: 25%
+      - sentiment: 25%
+
+  key_metrics:
+    - total_members
+    - weekly_active_members
+    - messages_per_day
+    - questions_answered
+    - avg_response_time
+    - member_retention_30d
+
+  alerts:
+    - engagement_drop: ">20% week-over-week"
+    - unanswered_questions: ">10 pending"
+    - negative_sentiment: ">5% of messages"
+
+content_dashboard:
+  blog:
+    - total_views
+    - unique_visitors
+    - avg_time_on_page
+    - bounce_rate
+    - top_performing_posts
+    - conversion_rate
+
+  docs:
+    - page_views
+    - search_queries
+    - 404_errors
+    - time_to_first_api_call
+    - feedback_ratings
+
+  video:
+    - total_views
+    - watch_time
+    - completion_rate
+    - subscriber_growth
+    - top_videos
+
+event_dashboard:
+  pre_event:
+    - registrations
+    - registration_source
+    - email_open_rate
+
+  during:
+    - attendance_rate
+    - session_attendance
+    - chat_engagement
+
+  post_event:
+    - nps_score
+    - content_views
+    - leads_generated
+    - feedback_themes
+
+reporting_templates:
+  weekly:
+    sections:
+      - key_wins
+      - metrics_snapshot
+      - notable_issues
+      - upcoming_focus
+    length: 1 page
+
+  monthly:
+    sections:
+      - executive_summary
+      - metrics_deep_dive
+      - program_updates
+      - challenges_and_learnings
+      - next_month_priorities
+    length: 3-5 pages
+
+  quarterly:
+    sections:
+      - okr_progress
+      - funnel_analysis
+      - roi_calculation
+      - strategic_recommendations
+    length: 10-15 pages
+
+tools_stack:
+  analytics:
+    - google_analytics
+    - amplitude
+    - mixpanel
+    - segment
+
+  community:
+    - orbit
+    - common_room
+    - discord_insights
+    - slack_analytics
+
+  visualization:
+    - metabase
+    - grafana
+    - looker
+    - google_data_studio
+
+  tracking:
+    - utm_parameters
+    - referral_codes
+    - developer_surveys

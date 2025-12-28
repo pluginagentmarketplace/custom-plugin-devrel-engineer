@@ -1,0 +1,132 @@
+# Technical Writing Checklist
+# Quality standards for developer content
+
+pre_writing:
+  research:
+    - [ ] "Understand target audience level"
+    - [ ] "Research existing content on topic"
+    - [ ] "Identify unique angle/value"
+    - [ ] "Gather all technical details"
+
+  planning:
+    - [ ] "Create outline with main points"
+    - [ ] "Plan code examples needed"
+    - [ ] "Identify visuals/diagrams"
+    - [ ] "Set word count target"
+
+writing_standards:
+  language:
+    voice: active
+    person: second  # "you" not "the developer"
+    tense: present
+    tone: friendly_professional
+
+  formatting:
+    paragraphs: max_4_sentences
+    sentences: max_25_words
+    bullet_points: max_7_items
+    code_blocks: max_30_lines
+
+  structure:
+    h1: one_per_page
+    h2: major_sections
+    h3: subsections
+    h4: rarely_needed
+
+code_samples:
+  requirements:
+    - [ ] "Actually runs without errors"
+    - [ ] "Minimal - shows only relevant code"
+    - [ ] "Commented for complex parts"
+    - [ ] "Uses realistic variable names"
+    - [ ] "Follows language conventions"
+
+  best_practices:
+    - "Show complete working example"
+    - "Highlight important lines"
+    - "Include output when helpful"
+    - "Provide multiple language options if possible"
+
+  anti_patterns:
+    - "foo/bar/baz variable names"
+    - "Truncated code with ..."
+    - "Assuming imports/setup"
+    - "Outdated syntax"
+
+seo_optimization:
+  title:
+    - [ ] "Contains primary keyword"
+    - [ ] "Under 60 characters"
+    - [ ] "Compelling to click"
+
+  content:
+    - [ ] "Keyword in first 100 words"
+    - [ ] "H2s contain related keywords"
+    - [ ] "Internal links to related content"
+    - [ ] "External links to authoritative sources"
+
+  meta:
+    - [ ] "Meta description under 160 chars"
+    - [ ] "Descriptive URL slug"
+    - [ ] "Alt text on images"
+
+quality_review:
+  accuracy:
+    - [ ] "Technical facts verified"
+    - [ ] "Code samples tested"
+    - [ ] "Links working"
+    - [ ] "Version numbers current"
+
+  clarity:
+    - [ ] "Jargon explained or avoided"
+    - [ ] "Acronyms defined on first use"
+    - [ ] "Complex concepts broken down"
+    - [ ] "Examples for abstract ideas"
+
+  completeness:
+    - [ ] "All promised content delivered"
+    - [ ] "Prerequisites listed"
+    - [ ] "Next steps provided"
+    - [ ] "Resources for further learning"
+
+  polish:
+    - [ ] "Spell check passed"
+    - [ ] "Grammar check passed"
+    - [ ] "Consistent formatting"
+    - [ ] "Images properly sized"
+
+content_types:
+  tutorial:
+    structure:
+      - introduction
+      - prerequisites
+      - step_by_step_instructions
+      - complete_code_example
+      - troubleshooting
+      - next_steps
+    word_count: 1500-3000
+
+  how_to_guide:
+    structure:
+      - problem_statement
+      - solution_overview
+      - implementation_steps
+      - variations
+    word_count: 800-1500
+
+  concept_explainer:
+    structure:
+      - what_is_it
+      - why_it_matters
+      - how_it_works
+      - examples
+      - when_to_use
+    word_count: 1000-2000
+
+  reference_doc:
+    structure:
+      - overview
+      - parameters_options
+      - examples
+      - related_functions
+    word_count: 500-1000

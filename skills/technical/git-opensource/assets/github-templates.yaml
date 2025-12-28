@@ -1,0 +1,201 @@
+# GitHub Repository Templates
+# Standard templates for open source projects
+
+readme_template:
+  sections:
+    - title_and_badges
+    - description
+    - features
+    - installation
+    - quickstart
+    - documentation_link
+    - contributing
+    - license
+    - community
+
+  example: |
+    # Project Name
+
+    [![npm version](https://badge.fury.io/js/project.svg)](...)
+    [![Build Status](https://github.com/org/project/actions/workflows/ci.yml/badge.svg)](...)
+    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](...)
+
+    Brief description of what this project does.
+
+    ## Features
+
+    - Feature 1
+    - Feature 2
+    - Feature 3
+
+    ## Installation
+
+    ```bash
+    npm install project-name
+    ```
+
+    ## Quick Start
+
+    ```javascript
+    const project = require('project-name');
+    project.doSomething();
+    ```
+
+    ## Documentation
+
+    [Full documentation →](https://docs.project.com)
+
+    ## Contributing
+
+    See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+    ## License
+
+    MIT License - see [LICENSE](LICENSE)
+
+contributing_template:
+  sections:
+    - welcome
+    - getting_started
+    - development_setup
+    - pull_request_process
+    - code_style
+    - testing
+    - community
+
+  example: |
+    # Contributing to Project
+
+    Thanks for your interest in contributing!
+
+    ## Getting Started
+
+    1. Fork the repository
+    2. Clone your fork
+    3. Create a branch
+    4. Make your changes
+    5. Submit a PR
+
+    ## Development Setup
+
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/project
+    cd project
+    npm install
+    npm test
+    ```
+
+    ## Pull Request Process
+
+    1. Update documentation
+    2. Add tests for new features
+    3. Ensure all tests pass
+    4. Request review
+
+    ## Code Style
+
+    - Follow existing patterns
+    - Use meaningful names
+    - Comment complex logic
+
+issue_templates:
+  bug_report:
+    name: Bug Report
+    description: Report a bug
+    body: |
+      **Describe the bug**
+      A clear description of the bug.
+
+      **To Reproduce**
+      Steps to reproduce:
+      1. Go to '...'
+      2. Click on '....'
+      3. See error
+
+      **Expected behavior**
+      What you expected to happen.
+
+      **Screenshots**
+      If applicable, add screenshots.
+
+      **Environment**
+      - OS: [e.g. macOS, Windows]
+      - Version: [e.g. 1.2.0]
+
+  feature_request:
+    name: Feature Request
+    description: Suggest a feature
+    body: |
+      **Is your feature related to a problem?**
+      A clear description of the problem.
+
+      **Describe the solution**
+      What you'd like to happen.
+
+      **Alternatives considered**
+      Other solutions you've thought about.
+
+      **Additional context**
+      Any other context or screenshots.
+
+pr_template:
+  body: |
+    ## Description
+    Brief description of changes.
+
+    ## Type of Change
+    - [ ] Bug fix
+    - [ ] New feature
+    - [ ] Breaking change
+    - [ ] Documentation update
+
+    ## Checklist
+    - [ ] Tests added/updated
+    - [ ] Documentation updated
+    - [ ] Changelog entry added
+    - [ ] Self-review completed
+
+    ## Related Issues
+    Fixes #(issue number)
+
+labels:
+  standard:
+    - name: bug
+      color: d73a4a
+      description: Something isn't working
+
+    - name: enhancement
+      color: a2eeef
+      description: New feature or request
+
+    - name: good first issue
+      color: 7057ff
+      description: Good for newcomers
+
+    - name: help wanted
+      color: 008672
+      description: Extra attention needed
+
+    - name: documentation
+      color: 0075ca
+      description: Documentation improvements
+
+    - name: duplicate
+      color: cfd3d7
+      description: Already exists
+
+    - name: wontfix
+      color: ffffff
+      description: Will not be worked on
+
+release_workflow:
+  steps:
+    - update_changelog
+    - bump_version
+    - create_release_branch
+    - run_tests
+    - merge_to_main
+    - create_tag
+    - publish_package
+    - create_github_release
+    - announce

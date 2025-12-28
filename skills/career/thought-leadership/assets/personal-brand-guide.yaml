@@ -1,0 +1,133 @@
+# Personal Brand Building Guide
+# For DevRel professionals
+
+brand_foundation:
+  self_assessment:
+    questions:
+      - "What topics could you talk about for hours?"
+      - "What questions do people always ask you?"
+      - "What problems have you solved uniquely?"
+      - "What do you believe that others don't?"
+
+  positioning:
+    formula: "I help [audience] achieve [outcome] through [method]"
+    example: "I help developers build secure APIs through practical security education"
+
+  differentiation:
+    identify:
+      - unique_experience
+      - contrarian_viewpoint
+      - specific_expertise
+      - communication_style
+
+content_pillars:
+  define_3_5_topics:
+    example:
+      - api_security: 40%
+      - developer_experience: 30%
+      - devrel_career: 20%
+      - tech_leadership: 10%
+
+  content_types:
+    educational: "How-to, tutorials, explanations"
+    opinion: "Hot takes, predictions, perspectives"
+    story: "Personal experiences, lessons learned"
+    curation: "Sharing and commenting on others' work"
+
+platform_strategy:
+  twitter_x:
+    purpose: "Real-time engagement, quick insights"
+    content:
+      - daily_tips
+      - thread_tutorials
+      - industry_commentary
+      - event_live_tweeting
+    frequency: 1-5 per day
+
+  linkedin:
+    purpose: "Professional presence, long-form thought leadership"
+    content:
+      - personal_stories
+      - industry_insights
+      - career_advice
+      - company_updates
+    frequency: 3-5 per week
+
+  blog:
+    purpose: "Deep expertise, SEO, portfolio"
+    content:
+      - technical_deep_dives
+      - opinion_pieces
+      - case_studies
+    frequency: 1-2 per month
+
+  youtube:
+    purpose: "Tutorial authority, discoverability"
+    content:
+      - tutorials
+      - talks
+      - interviews
+    frequency: 1-2 per month
+
+growth_tactics:
+  consistency:
+    - "Publish on schedule, not just when inspired"
+    - "Maintain consistent voice and quality"
+    - "Show up even when engagement is low"
+
+  amplification:
+    - "Engage with others' content generously"
+    - "Join conversations in your niche"
+    - "Collaborate with peers"
+    - "Guest post on established platforms"
+
+  networking:
+    - "DM people whose work you admire"
+    - "Offer help before asking for anything"
+    - "Introduce people who should know each other"
+    - "Show up at events (virtual or in-person)"
+
+measurement:
+  vanity_metrics:
+    - follower_count
+    - likes_and_shares
+    - page_views
+    note: "Track but don't optimize for these"
+
+  meaningful_metrics:
+    - speaking_invitations
+    - job_opportunities
+    - collaboration_requests
+    - quote_requests
+    - revenue_influenced
+    note: "These indicate real influence"
+
+  qualitative:
+    - "Quality of followers (decision makers?)"
+    - "Depth of conversations"
+    - "Reputation in specific communities"
+
+timeline:
+  months_1_3:
+    - "Define positioning and pillars"
+    - "Set up all platforms consistently"
+    - "Start publishing 3x/week minimum"
+    - "Engage with 10 accounts daily"
+
+  months_4_6:
+    - "Increase publishing frequency"
+    - "Pitch guest posts"
+    - "Apply to speak at events"
+    - "Start newsletter"
+
+  months_7_12:
+    - "Refine based on what's working"
+    - "Build deeper relationships"
+    - "Create signature content"
+    - "Measure meaningful metrics"
+
+  year_2_plus:
+    - "Expand to new platforms"
+    - "Write book or major content"
+    - "Advisory or mentorship roles"
+    - "Industry recognition"

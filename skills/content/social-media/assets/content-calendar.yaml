@@ -1,0 +1,119 @@
+# Social Media Content Calendar
+# Weekly planning template for DevRel
+
+platforms:
+  twitter_x:
+    optimal_times:
+      - "9-11 AM (workday start)"
+      - "12-1 PM (lunch)"
+      - "5-7 PM (commute)"
+    frequency: 1-3 per day
+    content_types:
+      - quick_tips
+      - threads
+      - code_screenshots
+      - memes
+      - announcements
+
+  linkedin:
+    optimal_times:
+      - "7-8 AM (morning scroll)"
+      - "12 PM (lunch)"
+      - "5-6 PM (end of day)"
+    frequency: 1 per day
+    content_types:
+      - personal_stories
+      - industry_insights
+      - how_to_posts
+      - announcements
+
+  youtube:
+    optimal_times:
+      - "Thursday-Saturday"
+    frequency: 1-2 per week
+    content_types:
+      - tutorials
+      - live_streams
+      - shorts
+
+weekly_schedule:
+  monday:
+    twitter: "Weekly thread (educational)"
+    linkedin: "Industry trend/insight"
+    theme: "Set the week's tone"
+
+  tuesday:
+    twitter: "Quick tip with code"
+    linkedin: "How-to post"
+    theme: "Educational content"
+
+  wednesday:
+    twitter: "Engagement post (question)"
+    linkedin: "Personal story/lesson"
+    theme: "Community building"
+
+  thursday:
+    twitter: "Product feature/update"
+    linkedin: "Announcement (if any)"
+    youtube: "Upload tutorial"
+    theme: "Product awareness"
+
+  friday:
+    twitter: "Fun/meme/community"
+    linkedin: "Weekend inspiration"
+    theme: "Light and engaging"
+
+content_formulas:
+  twitter_thread:
+    tweet_1: "Hook: Problem or provocative statement"
+    tweet_2: "Context: Why this matters"
+    tweets_3_7: "Content: Tips, steps, or examples"
+    last_tweet: "Summary + CTA (follow, retweet)"
+
+  linkedin_post:
+    line_1: "Bold opening statement (hook)"
+    paragraph_1: "Story or context (2-3 lines)"
+    paragraph_2: "The insight or lesson"
+    bullets: "Key takeaways (3-5 points)"
+    closing: "Question or CTA"
+    hashtags: "3-5 relevant hashtags"
+
+  code_screenshot:
+    elements:
+      - "Clean syntax highlighting"
+      - "Light or dark theme (consistent)"
+      - "Visible font size"
+      - "File name/language visible"
+      - "Brief caption explaining code"
+
+engagement_tactics:
+  twitter:
+    - "Reply to comments within 1 hour"
+    - "Quote tweet interesting posts"
+    - "Participate in relevant threads"
+    - "Use polls for engagement"
+
+  linkedin:
+    - "Engage with first commenters"
+    - "Reply with additional value"
+    - "Tag relevant people (sparingly)"
+    - "Share others' content"
+
+metrics_tracking:
+  weekly:
+    - follower_growth
+    - engagement_rate
+    - top_performing_posts
+    - click_through_rate
+
+  monthly:
+    - growth_trends
+    - content_type_performance
+    - best_posting_times
+    - audience_insights
+
+  tools:
+    - twitter_analytics
+    - linkedin_analytics
+    - buffer_or_hootsuite
+    - google_analytics

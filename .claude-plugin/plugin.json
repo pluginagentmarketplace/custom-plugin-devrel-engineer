@@ -1,55 +1,59 @@
 {
-  "name": "developer-roadmap-plugin",
-  "version": "2.0.0",
-  "description": "Comprehensive learning system for 65+ developer roles with 7 specialized agents covering all major technology stacks and career paths",
+  "name": "devrel-engineer-plugin",
+  "version": "3.0.0",
+  "description": "Comprehensive Developer Relations plugin aligned with roadmap.sh/devrel - 18 skills covering communication, community, events, content, metrics, and career development",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
     "email": "kacarumit.phd@gmail.com"
   },
   "license": "SEE LICENSE IN LICENSE",
   "keywords": [
-    "roadmap",
-    "learning",
-    "developer",
-    "career",
-    "frontend",
-    "backend",
-    "devops",
-    "data-ai"
+    "devrel",
+    "developer-relations",
+    "developer-advocate",
+    "community-building",
+    "content-creation",
+    "technical-writing",
+    "developer-experience",
+    "public-speaking",
+    "event-management"
   ],
   "repository": {
     "url": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer"
   },
   "agents": [
-    "./agents/01-frontend-web-specialist.md",
-    "./agents/02-backend-api-architect.md",
-    "./agents/03-devops-infrastructure-engineer.md",
-    "./agents/04-data-ai-specialist.md",
-    "./agents/05-software-architect.md",
-    "./agents/06-engineering-leader.md",
-    "./agents/07-emerging-tech-specialist.md"
+    "./agents/01-devrel-strategist.md",
+    "./agents/02-community-builder.md",
+    "./agents/03-content-creator.md",
+    "./agents/04-technical-writer.md",
+    "./agents/05-event-manager.md",
+    "./agents/06-developer-advocate.md",
+    "./agents/07-metrics-analyst.md"
   ],
   "commands": [
-    "./commands/01-roadmap-start.md",
-    "./commands/02-roadmap-browse.md",
-    "./commands/03-roadmap-role.md",
-    "./commands/04-roadmap-resources.md"
+    "./commands/devrel-start.md",
+    "./commands/cfp-submit.md",
+    "./commands/content-plan.md",
+    "./commands/community-launch.md"
   ],
   "skills": [
-    "./skills/frontend/01-frameworks/SKILL.md",
-    "./skills/frontend/02-languages/SKILL.md",
-    "./skills/frontend/03-performance/SKILL.md",
-    "./skills/backend/01-runtimes/SKILL.md",
-    "./skills/backend/02-databases/SKILL.md",
-    "./skills/backend/03-apis/SKILL.md",
-    "./skills/devops/01-containers/SKILL.md",
-    "./skills/devops/02-orchestration/SKILL.md",
-    "./skills/devops/03-cloud/SKILL.md",
-    "./skills/data-ai/01-fundamentals/SKILL.md",
-    "./skills/data-ai/02-ml-advanced/SKILL.md",
-    "./skills/data-ai/03-ai-engineering/SKILL.md",
-    "./skills/architecture/01-patterns/SKILL.md",
-    "./skills/architecture/02-systems/SKILL.md"
+    "./skills/communication/public-speaking/SKILL.md",
+    "./skills/communication/technical-writing/SKILL.md",
+    "./skills/community/building-community/SKILL.md",
+    "./skills/community/moderation-guidelines/SKILL.md",
+    "./skills/events/event-management/SKILL.md",
+    "./skills/events/conference-speaking/SKILL.md",
+    "./skills/content/blogging/SKILL.md",
+    "./skills/content/video-production/SKILL.md",
+    "./skills/content/social-media/SKILL.md",
+    "./skills/onboarding/documentation/SKILL.md",
+    "./skills/onboarding/tutorials-samples/SKILL.md",
+    "./skills/support/developer-support/SKILL.md",
+    "./skills/metrics/analytics-reporting/SKILL.md",
+    "./skills/career/thought-leadership/SKILL.md",
+    "./skills/career/personal-branding/SKILL.md",
+    "./skills/technical/apis-sdks/SKILL.md",
+    "./skills/technical/git-opensource/SKILL.md"
   ],
   "hooks": "./hooks/hooks.json"
 }

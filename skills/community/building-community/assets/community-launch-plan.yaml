@@ -1,0 +1,146 @@
+# Community Launch Plan Template
+# Step-by-step guide for launching developer communities
+
+pre_launch:
+  week_1_2:
+    strategy:
+      - define_community_purpose
+      - identify_target_audience
+      - set_success_metrics
+      - choose_platform
+
+    documentation:
+      - community_guidelines
+      - code_of_conduct
+      - welcome_message
+      - faq_document
+
+  week_3_4:
+    setup:
+      - create_platform_account
+      - configure_channels_categories
+      - set_up_moderation_tools
+      - create_welcome_flow
+
+    content:
+      - seed_10_discussion_topics
+      - create_resource_links
+      - prepare_launch_announcement
+      - design_community_branding
+
+  week_5_6:
+    soft_launch:
+      - invite_20_founding_members
+      - gather_feedback_on_structure
+      - refine_based_on_input
+      - train_initial_moderators
+
+launch_week:
+  day_1:
+    - send_launch_announcement
+    - post_on_social_media
+    - email_existing_users
+    - personally_welcome_each_member
+
+  day_2_3:
+    - host_welcome_ama
+    - encourage_introductions
+    - highlight_early_contributors
+    - answer_all_questions
+
+  day_4_5:
+    - share_first_tutorial_content
+    - start_weekly_discussion_thread
+    - announce_first_community_event
+    - gather_feedback_survey
+
+  day_6_7:
+    - review_metrics
+    - address_pain_points
+    - celebrate_wins_publicly
+    - plan_week_2_content
+
+growth_phases:
+  phase_1_seed:
+    size: 0-100
+    focus: quality_over_quantity
+    tactics:
+      - personal_invitations
+      - 1_on_1_conversations
+      - high_touch_engagement
+    time: 2-4 weeks
+
+  phase_2_early_growth:
+    size: 100-500
+    focus: content_and_value
+    tactics:
+      - regular_content_schedule
+      - guest_experts
+      - cross_promotion
+    time: 1-3 months
+
+  phase_3_momentum:
+    size: 500-2000
+    focus: programs_and_events
+    tactics:
+      - champion_program_launch
+      - regular_events
+      - partnerships
+    time: 3-6 months
+
+  phase_4_scale:
+    size: 2000-10000
+    focus: community_led
+    tactics:
+      - empower_champions
+      - sub_communities
+      - user_generated_content
+    time: 6-12 months
+
+  phase_5_maturity:
+    size: 10000+
+    focus: sustainability
+    tactics:
+      - autonomous_leadership
+      - minimal_intervention
+      - strategic_initiatives
+    time: ongoing
+
+channel_structure:
+  essential:
+    - welcome_introductions
+    - announcements
+    - general_discussion
+    - help_support
+    - showcase_projects
+
+  engagement:
+    - off_topic
+    - events
+    - jobs_careers
+    - feedback_suggestions
+
+  technical:
+    - getting_started
+    - advanced_topics
+    - code_review
+    - bug_reports
+
+metrics_tracking:
+  weekly:
+    - new_members
+    - active_members
+    - messages_posted
+    - questions_answered
+
+  monthly:
+    - member_retention
+    - engagement_rate
+    - content_performance
+    - nps_survey
+
+  quarterly:
+    - community_health_score
+    - program_effectiveness
+    - growth_trajectory
+    - goal_progress

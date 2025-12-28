@@ -1,0 +1,121 @@
+# Blog Post Template
+# Structure for technical blog posts
+
+post_types:
+  tutorial:
+    purpose: "Teach how to do something"
+    structure:
+      - title
+      - tldr
+      - introduction
+      - prerequisites
+      - step_by_step_instructions
+      - complete_code_example
+      - troubleshooting
+      - summary
+      - next_steps
+    word_count: 1500-3000
+    example_titles:
+      - "How to Build a REST API with FastAPI in 10 Minutes"
+      - "Getting Started with React Hooks: A Practical Guide"
+
+  explainer:
+    purpose: "Explain a concept or technology"
+    structure:
+      - title
+      - tldr
+      - what_is_it
+      - why_it_matters
+      - how_it_works
+      - practical_example
+      - when_to_use
+      - summary
+    word_count: 1000-2000
+    example_titles:
+      - "Understanding WebSockets: Real-Time Communication Explained"
+      - "What is GraphQL and Why Should You Care?"
+
+  comparison:
+    purpose: "Compare alternatives"
+    structure:
+      - title
+      - tldr
+      - overview_of_options
+      - comparison_table
+      - detailed_analysis
+      - use_case_recommendations
+      - conclusion
+    word_count: 1500-2500
+    example_titles:
+      - "REST vs GraphQL: Choosing the Right API Style"
+      - "PostgreSQL vs MySQL: A 2024 Comparison"
+
+  case_study:
+    purpose: "Share real-world implementation"
+    structure:
+      - title
+      - tldr
+      - the_challenge
+      - the_approach
+      - implementation_details
+      - results_and_metrics
+      - lessons_learned
+    word_count: 1500-2500
+    example_titles:
+      - "How We Reduced API Latency by 90%"
+      - "Scaling to 1 Million Users: Our Database Journey"
+
+seo_checklist:
+  title:
+    - [ ] "Contains primary keyword"
+    - [ ] "Under 60 characters"
+    - [ ] "Includes benefit or number"
+    - [ ] "Compelling to click"
+
+  content:
+    - [ ] "Keyword in first 100 words"
+    - [ ] "Keyword in at least one H2"
+    - [ ] "Natural keyword usage throughout"
+    - [ ] "Internal links to related content"
+    - [ ] "External links to authoritative sources"
+
+  technical:
+    - [ ] "Meta description set (150-160 chars)"
+    - [ ] "URL slug is short and keyword-rich"
+    - [ ] "All images have alt text"
+    - [ ] "Images are compressed"
+    - [ ] "Page loads under 3 seconds"
+
+writing_guidelines:
+  voice:
+    - "Second person (you/your)"
+    - "Active voice preferred"
+    - "Friendly but professional"
+    - "Avoid jargon or explain it"
+
+  formatting:
+    - "Paragraphs max 4 sentences"
+    - "Use bullet points liberally"
+    - "Bold key terms"
+    - "Code blocks for all code"
+    - "Tables for comparisons"
+
+  code_examples:
+    - "Complete, runnable examples"
+    - "Syntax highlighting"
+    - "Comments for complex parts"
+    - "Show expected output"
+
+content_calendar:
+  frequency: weekly
+  rotation:
+    - week_1: tutorial
+    - week_2: explainer
+    - week_3: comparison_or_case_study
+    - week_4: community_content_or_announcement
+
+  planning:
+    - "Map to product releases"
+    - "Address common questions"
+    - "Follow industry trends"
+    - "Republish top performers"

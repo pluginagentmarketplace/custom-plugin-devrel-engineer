@@ -1,0 +1,118 @@
+# Video Production Checklist
+# Quality standards for technical video content
+
+pre_production:
+  planning:
+    - [ ] "Define video goal and target audience"
+    - [ ] "Research topic thoroughly"
+    - [ ] "Create outline/script"
+    - [ ] "Prepare code samples"
+    - [ ] "Plan visuals and demos"
+
+  setup:
+    - [ ] "Test camera and lighting"
+    - [ ] "Check microphone levels"
+    - [ ] "Clean desktop/workspace"
+    - [ ] "Close unnecessary apps"
+    - [ ] "Disable notifications"
+
+production:
+  recording:
+    screen_capture:
+      - [ ] "Resolution: 1080p minimum"
+      - [ ] "Frame rate: 30fps minimum"
+      - [ ] "Font size increased (140%+)"
+      - [ ] "Cursor highlighting enabled"
+      - [ ] "Keyboard shortcuts visible"
+
+    on_camera:
+      - [ ] "Camera at eye level"
+      - [ ] "Face well-lit (no shadows)"
+      - [ ] "Background clean/blurred"
+      - [ ] "Microphone positioned correctly"
+      - [ ] "Energy level appropriate"
+
+    audio:
+      - [ ] "Levels between -12 and -6 dB"
+      - [ ] "No background noise"
+      - [ ] "Pop filter in place"
+      - [ ] "Monitoring with headphones"
+
+post_production:
+  editing:
+    rough_cut:
+      - [ ] "Remove mistakes and retakes"
+      - [ ] "Cut dead air and pauses"
+      - [ ] "Arrange segments in order"
+
+    fine_cut:
+      - [ ] "Tighten pacing"
+      - [ ] "Add transitions"
+      - [ ] "Insert B-roll footage"
+      - [ ] "Add lower thirds/graphics"
+
+    polish:
+      - [ ] "Color correction if needed"
+      - [ ] "Add intro/outro"
+      - [ ] "Include end screens"
+      - [ ] "Add background music"
+
+    audio_polish:
+      - [ ] "Normalize audio levels"
+      - [ ] "Apply noise reduction"
+      - [ ] "Add EQ if needed"
+      - [ ] "Balance music and voice"
+
+  export:
+    youtube:
+      format: MP4
+      codec: H.264
+      resolution: 1080p or 4K
+      frame_rate: 30fps
+      bitrate: 8-12 Mbps
+
+publishing:
+  youtube_optimization:
+    title:
+      - "Include primary keyword"
+      - "Add benefit or number"
+      - "Keep under 60 characters"
+
+    thumbnail:
+      - "Resolution: 1280x720"
+      - "Bold, readable text"
+      - "Contrasting colors"
+      - "Include face if possible"
+
+    description:
+      - "First 150 chars crucial"
+      - "Include timestamps"
+      - "Add relevant links"
+      - "Call to action"
+
+    tags:
+      - "5-10 relevant tags"
+      - "Mix broad and specific"
+      - "Include brand name"
+
+equipment_guide:
+  budget_setup:
+    total: "$300-500"
+    camera: "Logitech C920/C922"
+    microphone: "Blue Yeti USB"
+    lighting: "Ring light"
+    software: "OBS Studio (free)"
+
+  mid_range:
+    total: "$1000-2000"
+    camera: "Sony ZV-1 / Canon M50"
+    microphone: "Rode PodMic + interface"
+    lighting: "Key light + fill"
+    software: "DaVinci Resolve (free)"
+
+  professional:
+    total: "$3000+"
+    camera: "Sony A7 series / Canon R series"
+    microphone: "Shure SM7B + interface"
+    lighting: "Elgato Key Light Air"
+    software: "Premiere Pro / Final Cut"

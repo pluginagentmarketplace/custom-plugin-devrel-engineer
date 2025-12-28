@@ -1,0 +1,96 @@
+# Code of Conduct Template
+# Customizable community guidelines
+
+code_of_conduct:
+  version: "1.0"
+  last_updated: "2024-01-01"
+
+  pledge:
+    statement: |
+      We as members, contributors, and leaders pledge to make participation
+      in our community a harassment-free experience for everyone, regardless
+      of age, body size, visible or invisible disability, ethnicity, sex
+      characteristics, gender identity and expression, level of experience,
+      education, socio-economic status, nationality, personal appearance,
+      race, religion, or sexual identity and orientation.
+
+  standards:
+    positive_behavior:
+      - "Using welcoming and inclusive language"
+      - "Being respectful of differing viewpoints and experiences"
+      - "Gracefully accepting constructive criticism"
+      - "Focusing on what is best for the community"
+      - "Showing empathy towards other community members"
+
+    unacceptable_behavior:
+      - "The use of sexualized language or imagery"
+      - "Trolling, insulting/derogatory comments, and personal attacks"
+      - "Public or private harassment"
+      - "Publishing others' private information without permission"
+      - "Other conduct which could be considered inappropriate"
+
+  enforcement:
+    responsibilities: |
+      Community leaders are responsible for clarifying and enforcing our
+      standards of acceptable behavior and will take appropriate and fair
+      corrective action in response to any behavior that they deem
+      inappropriate, threatening, offensive, or harmful.
+
+    guidelines:
+      level_1:
+        name: Correction
+        impact: "Minor inappropriate behavior"
+        consequence: "Private warning with explanation"
+
+      level_2:
+        name: Warning
+        impact: "Violation through single or series of actions"
+        consequence: "Warning with consequences for continued behavior"
+
+      level_3:
+        name: "Temporary Ban"
+        impact: "Serious violation of community standards"
+        consequence: "Temporary ban from community interaction"
+
+      level_4:
+        name: "Permanent Ban"
+        impact: "Demonstrating pattern of violation or severe incident"
+        consequence: "Permanent ban from all community interaction"
+
+  reporting:
+    methods:
+      - "Email: conduct@example.com"
+      - "Discord: DM a moderator"
+      - "Anonymous form: [link]"
+
+    process:
+      - "All complaints will be reviewed promptly"
+      - "Reports will be kept confidential"
+      - "Response within 48 hours"
+
+  attribution: |
+    This Code of Conduct is adapted from the Contributor Covenant,
+    version 2.1, available at
+    https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+
+moderation_actions:
+  documentation_required:
+    - date_time
+    - user_involved
+    - violation_type
+    - action_taken
+    - moderator_name
+    - evidence_links
+
+  escalation_triggers:
+    - "Threats of violence"
+    - "Doxxing or privacy violations"
+    - "Repeated violations after warnings"
+    - "Illegal activity"
+    - "Moderator disagreement"
+
+  appeal_process:
+    timeframe: "7 days from action"
+    submission: "Email with case details"
+    review: "Different moderator reviews"
+    decision: "Final within 14 days"

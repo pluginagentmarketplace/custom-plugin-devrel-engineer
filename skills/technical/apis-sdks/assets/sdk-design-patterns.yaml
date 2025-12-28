@@ -1,0 +1,155 @@
+# SDK Design Patterns
+# Best practices for building developer-friendly SDKs
+
+sdk_structure:
+  core:
+    - client: "Main entry point"
+    - config: "Configuration options"
+    - auth: "Authentication handling"
+    - http: "HTTP client wrapper"
+
+  resources:
+    - models: "Data type definitions"
+    - endpoints: "API endpoint wrappers"
+    - responses: "Response handling"
+    - errors: "Error types"
+
+  utilities:
+    - pagination: "Cursor/offset pagination"
+    - retry: "Retry logic"
+    - logging: "Debug logging"
+    - validation: "Input validation"
+
+design_principles:
+  idiomatic:
+    description: "Follow language conventions"
+    examples:
+      python: "snake_case, context managers"
+      javascript: "camelCase, Promises/async-await"
+      go: "PascalCase, error returns"
+      java: "Builder pattern, checked exceptions"
+
+  consistent:
+    description: "Predictable patterns across resources"
+    pattern: |
+      client.resource.list()
+      client.resource.get(id)
+      client.resource.create(data)
+      client.resource.update(id, data)
+      client.resource.delete(id)
+
+  type_safe:
+    description: "Strong typing where possible"
+    tools:
+      python: "Type hints, dataclasses, Pydantic"
+      javascript: "TypeScript definitions"
+      go: "Native types"
+      java: "Strong typing by default"
+
+authentication:
+  patterns:
+    api_key:
+      initialization: |
+        client = Client(api_key="sk_...")
+      auto_injection: "Authorization header"
+
+    oauth:
+      initialization: |
+        client = Client(access_token="...")
+      refresh: "Automatic token refresh"
+
+    bearer:
+      initialization: |
+        client = Client(token="...")
+
+error_handling:
+  structure:
+    base_error: "All SDK errors inherit"
+    api_error: "Server returned error"
+    validation_error: "Invalid input"
+    auth_error: "Authentication failed"
+    network_error: "Connection issue"
+    rate_limit_error: "Rate limit exceeded"
+
+  example:
+    python: |
+      try:
+          user = client.users.get("invalid")
+      except NotFoundError as e:
+          print(f"User not found: {e.message}")
+      except RateLimitError as e:
+          print(f"Retry after {e.retry_after}s")
+      except APIError as e:
+          print(f"API error: {e.code} - {e.message}")
+
+pagination:
+  patterns:
+    cursor:
+      description: "Token-based pagination"
+      usage: |
+        for user in client.users.list():
+            print(user)  # Auto-paginate
+
+    offset:
+      description: "Skip/limit pagination"
+      usage: |
+        page = client.users.list(offset=0, limit=100)
+        next_page = client.users.list(offset=100, limit=100)
+
+    iterator:
+      description: "Stream results"
+      usage: |
+        async for user in client.users.list():
+            await process(user)
+
+retry_logic:
+  defaults:
+    max_retries: 3
+    backoff: exponential
+    retryable_errors:
+      - 500
+      - 502
+      - 503
+      - 504
+      - 429
+
+  configuration: |
+    client = Client(
+        max_retries=5,
+        retry_delay=1.0,
+        retry_on=[500, 502, 503, 504]
+    )
+
+logging:
+  levels:
+    none: "No logging"
+    error: "Errors only"
+    warn: "Warnings and errors"
+    info: "Important operations"
+    debug: "Full request/response"
+
+  example: |
+    client = Client(
+        api_key="...",
+        log_level="debug"
+    )
+
+testing:
+  mock_client: |
+    mock_client = MockClient()
+    mock_client.users.get.return_value = User(...)
+
+  test_fixtures:
+    - "Sample responses for each endpoint"
+    - "Error response examples"
+    - "Rate limit scenarios"
+
+documentation:
+  required:
+    - installation: "pip install, npm install, etc."
+    - quickstart: "First API call"
+    - configuration: "All options"
+    - examples: "Common use cases"
+    - api_reference: "Auto-generated from code"
+    - changelog: "Version history"
+    - contributing: "How to contribute"

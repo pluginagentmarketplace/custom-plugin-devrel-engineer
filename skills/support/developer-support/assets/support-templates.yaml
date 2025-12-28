@@ -1,0 +1,140 @@
+# Developer Support Templates
+# Response templates and FAQ patterns
+
+response_templates:
+  acknowledgment:
+    use_when: "First response to any question"
+    template: |
+      Thanks for reaching out! I understand you're trying to [summarize issue].
+
+      Let me help you with that...
+
+  clarification:
+    use_when: "Need more information"
+    template: |
+      To help you better, could you share:
+      - What you're trying to achieve
+      - The code/request you're using
+      - The error message you're seeing
+      - Your SDK/API version
+
+  solution:
+    use_when: "Providing answer"
+    template: |
+      Great question! Here's how to solve this:
+
+      **The Issue:** [Brief explanation]
+
+      **The Solution:**
+      ```code
+      [Code example]
+      ```
+
+      **Why this works:** [Brief explanation]
+
+      Let me know if you run into any issues!
+
+  escalation:
+    use_when: "Need engineering help"
+    template: |
+      Thanks for the detailed report! This looks like a bug that
+      needs our engineering team's attention.
+
+      I've created a ticket and will follow up once we have
+      more information. You can track progress at [link].
+
+  workaround:
+    use_when: "Bug exists but there's alternative"
+    template: |
+      You're right, this is a known limitation. Here's a
+      workaround until we ship a fix:
+
+      ```code
+      [Workaround code]
+      ```
+
+      We're tracking this issue at [link] - feel free to
+      subscribe for updates.
+
+  feature_request:
+    use_when: "User wants new feature"
+    template: |
+      Thanks for this suggestion! I can see how [feature]
+      would be useful for [use case].
+
+      I've added this to our feature request tracker.
+      You can upvote and follow progress at [link].
+
+      In the meantime, you might be able to achieve
+      something similar by [alternative approach].
+
+faq_templates:
+  authentication:
+    question: "How do I authenticate with the API?"
+    answer: |
+      You can authenticate using API keys or OAuth 2.0:
+
+      **API Keys** (for server-to-server)
+      ```bash
+      curl -H "Authorization: Bearer YOUR_API_KEY" \
+        https://api.example.com/v1/users
+      ```
+
+      **OAuth 2.0** (for user data)
+      See our [OAuth guide](/docs/oauth) for full implementation.
+
+      **Common Issues:**
+      - [401 Unauthorized](/docs/errors#401)
+      - [Token expired](/docs/errors#token-expired)
+
+  rate_limits:
+    question: "What are the API rate limits?"
+    answer: |
+      | Plan | Requests/minute | Daily limit |
+      |------|-----------------|-------------|
+      | Free | 60 | 1,000 |
+      | Pro | 600 | 50,000 |
+      | Enterprise | Custom | Custom |
+
+      **Handling rate limits:**
+      - Check `X-RateLimit-Remaining` header
+      - Implement exponential backoff
+      - [See our rate limit guide](/docs/rate-limits)
+
+  error_handling:
+    question: "How do I handle errors?"
+    answer: |
+      All errors return a consistent format:
+
+      ```json
+      {
+        "error": {
+          "code": "INVALID_REQUEST",
+          "message": "The 'email' field is required",
+          "details": { ... }
+        }
+      }
+      ```
+
+      **Error codes:** [Full error reference](/docs/errors)
+
+office_hours:
+  agenda_template:
+    - welcome: 2 min
+    - announcements: 3 min
+    - main_topic: 15 min
+    - open_qa: 25 min
+    - wrap_up: 5 min
+
+  promotion:
+    channels:
+      - community_discord
+      - twitter
+      - newsletter
+      - docs_banner
+    timing: 1 week before
+
+  follow_up:
+    - share_recording: within 24h
+    - answer_pending_questions: within 48h
+    - create_docs_from_questions: within 1 week

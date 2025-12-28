@@ -1,0 +1,118 @@
+# Documentation Structure Template
+# Information architecture for developer docs
+
+site_structure:
+  getting_started:
+    priority: 1
+    pages:
+      - quickstart: "5-minute hello world"
+      - installation: "Setup instructions"
+      - authentication: "How to authenticate"
+      - first_request: "Make your first API call"
+    goal: "Time to first success < 10 minutes"
+
+  guides:
+    priority: 2
+    pages:
+      - core_concepts: "Key ideas to understand"
+      - authentication: "Auth methods and tokens"
+      - error_handling: "Working with errors"
+      - pagination: "Handling large datasets"
+      - webhooks: "Event notifications"
+      - best_practices: "Recommended patterns"
+    goal: "Enable common use cases"
+
+  api_reference:
+    priority: 3
+    pages:
+      - overview: "API structure and conventions"
+      - endpoints: "All available endpoints"
+      - parameters: "Request parameters"
+      - responses: "Response formats"
+      - errors: "Error codes and handling"
+      - rate_limits: "Usage limits"
+    goal: "Complete technical reference"
+
+  sdks:
+    priority: 4
+    pages:
+      - overview: "Available SDKs"
+      - python: "Python SDK guide"
+      - javascript: "JavaScript/Node SDK"
+      - go: "Go SDK guide"
+      - java: "Java SDK guide"
+    goal: "Language-specific guidance"
+
+  resources:
+    priority: 5
+    pages:
+      - faq: "Frequently asked questions"
+      - changelog: "Release notes"
+      - migration: "Version upgrade guides"
+      - glossary: "Term definitions"
+      - support: "How to get help"
+    goal: "Supplementary information"
+
+page_templates:
+  quickstart:
+    sections:
+      - intro: "What you'll build"
+      - prerequisites: "What you need"
+      - step_1: "Install SDK"
+      - step_2: "Configure credentials"
+      - step_3: "Make first call"
+      - step_4: "See results"
+      - next_steps: "Where to go from here"
+    word_count: 500-800
+
+  tutorial:
+    sections:
+      - intro: "What you'll learn"
+      - prerequisites: "Required knowledge/setup"
+      - steps: "Numbered step-by-step"
+      - complete_code: "Full working example"
+      - explanation: "How it works"
+      - troubleshooting: "Common issues"
+      - next_steps: "Related tutorials"
+    word_count: 1000-2000
+
+  api_endpoint:
+    sections:
+      - endpoint: "Method and URL"
+      - description: "What it does"
+      - authentication: "Required auth"
+      - parameters: "Request params table"
+      - request_example: "Sample request"
+      - response_example: "Sample response"
+      - errors: "Possible errors"
+      - rate_limit: "Rate limit info"
+
+  concept:
+    sections:
+      - overview: "What is this?"
+      - why_matters: "Why should you care?"
+      - how_works: "Technical explanation"
+      - diagram: "Visual representation"
+      - examples: "Code examples"
+      - related: "Related concepts"
+    word_count: 800-1500
+
+quality_checklist:
+  every_page:
+    - [ ] "Clear title and intro"
+    - [ ] "Scannable with headers"
+    - [ ] "Code examples tested"
+    - [ ] "Links verified"
+    - [ ] "Prerequisites stated"
+
+  code_samples:
+    - [ ] "Complete and runnable"
+    - [ ] "Comments for clarity"
+    - [ ] "Error handling shown"
+    - [ ] "Multiple languages"
+
+  navigation:
+    - [ ] "Breadcrumbs present"
+    - [ ] "Related links included"
+    - [ ] "Previous/next links"
+    - [ ] "Search works"

@@ -1,9 +1,9 @@
 {
   "name": "custom-plugin-devrel-engineer",
-  "displayName": "Developer Roadmap Plugin",
-  "description": "Comprehensive learning system for 65+ developer roles with specialized agents for frontend, backend, DevOps, data/AI, and architecture",
+  "displayName": "DevRel Engineer Plugin",
+  "description": "Comprehensive Developer Relations plugin aligned with roadmap.sh/devrel - 17 skills covering communication, community building, event management, content creation, and career development",
   "category": "education",
-  "tags": ["learning", "roadmap", "career", "development"],
+  "tags": ["devrel", "developer-relations", "community", "content-creation", "developer-advocacy"],
   "source": "./",
   "verified": true,
   "featured": false

@@ -1,0 +1,131 @@
+# Networking Templates for DevRel
+# Building genuine professional relationships
+
+outreach_templates:
+  cold_introduction:
+    use_when: "First contact with someone you admire"
+    template: |
+      Hey [Name],
+
+      I've been following your work on [topic] and really loved
+      your [specific content/talk/post].
+
+      [One specific thing you learned or appreciated]
+
+      I work on [your area] and would love to connect.
+      No ask - just wanted to say your work is making a difference!
+
+      [Your name]
+
+  request_for_advice:
+    use_when: "Seeking guidance from experienced professional"
+    template: |
+      Hi [Name],
+
+      I'm [your role] at [company], working on [area].
+
+      I've admired your approach to [specific topic] and was wondering
+      if you'd have 15 minutes for a quick call? I'm specifically
+      curious about [one focused question].
+
+      No pressure either way - I know you're busy!
+
+      Thanks,
+      [Your name]
+
+  collaboration_pitch:
+    use_when: "Proposing content or project together"
+    template: |
+      Hey [Name],
+
+      I've got an idea I think could benefit both our audiences:
+
+      [Brief description of the collaboration]
+
+      Here's why I think it'd work:
+      - Your audience would benefit from [X]
+      - We could create [specific deliverable]
+      - I'd handle [your contribution]
+
+      What do you think?
+
+      [Your name]
+
+  conference_follow_up:
+    use_when: "After meeting at an event"
+    template: |
+      Hi [Name],
+
+      Great meeting you at [conference]! I really enjoyed our
+      conversation about [topic].
+
+      [Reference something specific from chat]
+
+      Would love to stay in touch. I'm also happy to share
+      [something valuable you can offer].
+
+      [Your name]
+
+networking_strategy:
+  before_events:
+    - "Research speakers and attendees"
+    - "Prepare 2-3 people to connect with"
+    - "Have your intro ready (30 seconds)"
+    - "Bring business cards or phone for contact swap"
+
+  during_events:
+    - "Ask questions, don't pitch"
+    - "Listen more than talk"
+    - "Take notes on conversations"
+    - "Introduce people to each other"
+
+  after_events:
+    - "Send follow-ups within 48 hours"
+    - "Connect on LinkedIn with personal note"
+    - "Share their content"
+    - "Offer help if you can"
+
+relationship_nurturing:
+  light_touch:
+    frequency: monthly
+    actions:
+      - "Like/comment on their posts"
+      - "Share their content"
+      - "React to their updates"
+
+  medium_touch:
+    frequency: quarterly
+    actions:
+      - "Send relevant article/resource"
+      - "Congratulate on achievements"
+      - "Quick check-in message"
+
+  deep_touch:
+    frequency: yearly_or_as_needed
+    actions:
+      - "Coffee chat or call"
+      - "Collaboration on content"
+      - "Introduce to others"
+      - "Support their projects"
+
+dont_do:
+  - "Mass connect without personalization"
+  - "Ask for favors before building relationship"
+  - "Only reach out when you need something"
+  - "Be pushy about responses"
+  - "Forget to follow through on promises"
+
+crm_for_networking:
+  tools:
+    - notion
+    - airtable
+    - google_sheets
+    - linkedin_saved
+
+  fields_to_track:
+    - name
+    - company_role
+    - how_met
+    - last_contact
+    - notes
+    - next_action

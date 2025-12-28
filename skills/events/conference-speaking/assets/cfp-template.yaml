@@ -1,0 +1,114 @@
+# CFP Submission Template
+# Winning conference proposal strategies
+
+cfp_structure:
+  title:
+    max_length: 80 characters
+    formula: "Action/Result + Topic + Benefit"
+    examples:
+      good:
+        - "How We Cut API Response Time by 90% with Edge Computing"
+        - "Beyond REST: Building Real-Time APIs with GraphQL Subscriptions"
+        - "From Zero to Production: Deploying ML Models in 30 Minutes"
+      bad:
+        - "GraphQL" # Too vague
+        - "My Journey with Kubernetes" # Self-focused
+        - "A Deep Dive into Various Database Solutions" # Too broad
+
+  abstract:
+    max_length: 300 words
+    structure:
+      hook: "Opening that grabs attention (1-2 sentences)"
+      problem: "What challenge does this address? (2-3 sentences)"
+      solution: "What approach/technique will be shared? (2-3 sentences)"
+      takeaways: "What will attendees learn? (bullet points)"
+      credibility: "Why should they trust you? (1 sentence)"
+
+    example: |
+      **Hook:** Your API is slow, and users are leaving. We've been there.
+
+      **Problem:** At [Company], our core API had grown to 50+ endpoints,
+      each averaging 2-second response times. User complaints were mounting,
+      and our infrastructure costs were spiraling.
+
+      **Solution:** This talk shares the three-phase optimization strategy
+      that reduced our P99 latency from 2000ms to 180ms: intelligent caching,
+      query optimization, and edge computing deployment.
+
+      **Takeaways:**
+      - Identify latency hotspots using distributed tracing
+      - Implement tiered caching strategies
+      - Deploy compute to the edge for global performance
+
+      **Credibility:** As the lead engineer on this project, I'll share
+      real production data and the lessons learned from our failures.
+
+  outline:
+    purpose: "Shows organizers you've thought this through"
+    format: |
+      1. Introduction (5 min)
+         - Problem statement
+         - Why this matters
+
+      2. Main Content (20-25 min)
+         - Technique 1: [Details]
+         - Technique 2: [Details]
+         - Demo/Example: [Specifics]
+
+      3. Conclusion (5 min)
+         - Key takeaways
+         - Resources
+         - Q&A setup
+
+talk_types:
+  lightning:
+    duration: 5-10 min
+    slides: 5-10
+    depth: "One key insight"
+    best_for: "Single technique or story"
+
+  standard:
+    duration: 25-45 min
+    slides: 20-35
+    depth: "Comprehensive topic coverage"
+    best_for: "Technical deep dives, case studies"
+
+  keynote:
+    duration: 45-60 min
+    slides: 40-50
+    depth: "Vision + depth + inspiration"
+    best_for: "Industry trends, major announcements"
+
+  workshop:
+    duration: 2-4 hours
+    slides: 30-50 + exercises
+    depth: "Hands-on learning"
+    best_for: "Practical skills training"
+
+submission_tips:
+  do:
+    - "Be specific about outcomes and takeaways"
+    - "Show unique perspective or access"
+    - "Include relevant experience"
+    - "Match talk to conference theme"
+    - "Proofread carefully"
+
+  avoid:
+    - "Sales pitches for products"
+    - "Generic topic descriptions"
+    - "Overused talk titles"
+    - "Assuming knowledge of your work"
+    - "Last-minute submissions"
+
+follow_up:
+  if_accepted:
+    - "Confirm immediately"
+    - "Start preparation early"
+    - "Promote talk on social"
+    - "Connect with organizers"
+
+  if_rejected:
+    - "Ask for feedback if possible"
+    - "Refine and resubmit elsewhere"
+    - "Don't take it personally"
+    - "Keep building speaker profile"
