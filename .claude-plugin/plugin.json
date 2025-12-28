@@ -1,7 +1,7 @@
 {
   "name": "devrel-engineer-plugin",
   "version": "3.0.0",
-  "description": "Comprehensive Developer Relations plugin aligned with roadmap.sh/devrel - 18 skills covering communication, community, events, content, metrics, and career development",
+  "description": "Comprehensive Developer Relations plugin - 18 skills covering communication, community, events, content, metrics, and career development",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
     "email": "kacarumit.phd@gmail.com"
