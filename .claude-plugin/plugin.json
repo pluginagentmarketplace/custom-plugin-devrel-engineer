@@ -1,6 +1,6 @@
 {
   "name": "devrel-engineer-plugin",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Comprehensive Developer Relations plugin - 18 skills covering communication, community, events, content, metrics, and career development",
   "author": {
     "name": "Dr. Umit Kacar & Muhsin Elcicek",
@@ -18,9 +18,7 @@
     "public-speaking",
     "event-management"
   ],
-  "repository": {
-    "url": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer"
-  },
+  "repository": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer",
   "agents": [
     "./agents/01-devrel-strategist.md",
     "./agents/02-community-builder.md",

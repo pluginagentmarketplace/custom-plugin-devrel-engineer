@@ -1,10 +1,24 @@
 {
-  "name": "custom-plugin-devrel-engineer",
-  "displayName": "DevRel Engineer Plugin",
-  "description": "Comprehensive Developer Relations plugin aligned with roadmap.sh/devrel - 17 skills covering communication, community building, event management, content creation, and career development",
-  "category": "education",
-  "tags": ["devrel", "developer-relations", "community", "content-creation", "developer-advocacy"],
-  "source": "./",
-  "verified": true,
-  "featured": false
+  "name": "pluginagentmarketplace-devrel-engineer",
+  "owner": {
+    "name": "Dr. Umit Kacar & Muhsin Elcicek",
+    "email": "kacarumit.phd@gmail.com",
+    "url": "https://github.com/pluginagentmarketplace"
+  },
+  "plugins": [
+    {
+      "name": "devrel-engineer-plugin",
+      "source": "./",
+      "description": "Comprehensive Developer Relations plugin with 7 specialized agents for communication, community, events, content, and career development.",
+      "version": "3.1.0",
+      "keywords": ["devrel", "developer-relations", "community", "content-creation", "developer-advocacy"],
+      "author": {
+        "name": "Dr. Umit Kacar & Muhsin Elcicek",
+        "email": "kacarumit.phd@gmail.com",
+        "url": "https://github.com/pluginagentmarketplace"
+      },
+      "repository": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer",
+      "homepage": "https://github.com/pluginagentmarketplace/custom-plugin-devrel-engineer"
+    }
+  ]
 }
