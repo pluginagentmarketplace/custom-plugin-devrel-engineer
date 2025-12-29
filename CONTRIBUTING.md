@@ -1,79 +1,89 @@
-# Contributing to DevRel Engineer Plugin
+# Contributing to Devrel Engineer Plugin
 
-Thank you for your interest in contributing to the DevRel Engineer Plugin!
+Thank you for your interest in contributing to this Claude Code plugin!
 
-## How to Contribute
+## 📋 How to Contribute
 
-### Reporting Issues
+1. **Fork** the repository
+2. **Create** your feature branch (`git checkout -b feature/amazing-feature`)
+3. **Follow** the Golden Format for new skills
+4. **Test** your changes thoroughly
+5. **Commit** your changes (`git commit -m 'feat: Add amazing feature'`)
+6. **Push** to the branch (`git push origin feature/amazing-feature`)
+7. **Open** a Pull Request
 
-1. Check existing issues first
-2. Provide clear description
-3. Include steps to reproduce
-4. Add relevant labels
+## 📐 Guidelines
 
-### Submitting Changes
+### SASMP v1.3.0 Compliance
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Make your changes
-4. Follow the Golden Format for new skills
-5. Test your changes
-6. Commit with clear messages
-7. Push to your fork
-8. Open a Pull Request
+All contributions must follow SASMP (Standardized Agent/Skill Metadata Protocol) v1.3.0:
 
-### Golden Format for Skills
+- Agents must include `sasmp_version: "1.3.0"` and `eqhm_enabled: true`
+- Skills must include `bonded_agent` and `bond_type` fields
+- Commands must have YAML frontmatter
 
-New skills must follow this structure:
-
-```
-skills/category/skill-name/
-├── SKILL.md           # Main skill file with SASMP frontmatter
-├── assets/            # YAML templates and configurations
-│   └── template.yaml
-├── scripts/           # Automation scripts (optional)
-│   └── script.sh
-└── references/        # Methodology guides (optional)
-    └── GUIDE.md
-```
-
-### SKILL.md Requirements
+### Agent Development
 
 ```yaml
 ---
-name: skill-name
-description: Clear description
+name: agent-name
+description: Agent description
+model: sonnet
+tools: Read, Write, Bash
 sasmp_version: "1.3.0"
-bonded_agent: agent-name
-bond_type: PRIMARY_BOND or SECONDARY_BOND
+eqhm_enabled: true
 ---
 ```
 
-### Code Style
+### Skill Development (Golden Format)
 
-- Use clear, descriptive names
-- Follow existing patterns
-- Add comments for complex logic
-- Include examples in documentation
+```
+skills/skill-name/
+├── SKILL.md          # Main skill definition
+├── assets/           # Templates, configs, schemas
+├── scripts/          # Automation scripts
+└── references/       # Documentation, guides
+```
 
-### Commit Messages
+SKILL.md frontmatter:
+```yaml
+---
+name: skill-name
+description: Skill description
+sasmp_version: "1.3.0"
+bonded_agent: agent-name
+bond_type: PRIMARY_BOND
+---
+```
 
-- Use conventional commit format
-- Start with verb: Add, Fix, Update, Remove
-- Keep first line under 70 characters
+### Command Development
 
-### Testing
+```yaml
+---
+name: command-name
+description: Command description
+allowed-tools: Read, Glob
+---
+```
 
-- Test all commands work
-- Verify skill templates render correctly
-- Check YAML syntax is valid
+## ✅ Testing Requirements
 
-## Questions?
+- Test all new features locally
+- Verify agent/skill bonding
+- Run `/plugin validate` before submitting
+- Ensure no E-code errors
 
-Open an issue with the `question` label.
+## 🔒 Code of Conduct
+
+- Be respectful and constructive
+- Follow existing code style
+- Document your changes
+- Test before submitting
+
+## ❓ Questions?
+
+Open an issue for any questions or suggestions.
 
 ---
 
-**Thank you for helping improve DevRel Engineer Plugin!**
-
-*Dr. Umit Kacar & Muhsin Elcicek*
+© 2025 Dr. Umit Kacar & Muhsin Elcicek. All Rights Reserved.
