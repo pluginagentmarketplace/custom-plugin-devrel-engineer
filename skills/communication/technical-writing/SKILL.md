@@ -1,7 +1,9 @@
 ---
 name: technical-writing
 description: Technical writing skills for blogs, documentation, and developer content
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 04-technical-writer
 bond_type: PRIMARY_BOND
 ---
@@ -9,6 +11,32 @@ bond_type: PRIMARY_BOND
 # Technical Writing for DevRel
 
 Create **clear, effective technical content** for developer audiences.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - content_type: enum[blog, docs, tutorial, api_reference]
+    - topic: string
+  optional:
+    - word_count_target: integer
+    - seo_keywords: array[string]
+    - code_language: string
+```
+
+### Output
+```yaml
+output:
+  content:
+    title: string
+    body: markdown
+    meta_description: string
+  quality:
+    readability_score: float
+    code_tested: boolean
+```
 
 ## Writing Principles
 
@@ -63,17 +91,76 @@ One paragraph context.
 
 - Keyword in title and H1
 - Keywords in first paragraph
-- Descriptive meta description
-- Internal linking to related content
+- Meta description (150-160 chars)
+- Internal linking
 - Code snippets for featured snippets
 
-## Quality Checklist
+## Retry Logic
 
-- [ ] Code samples tested and working
-- [ ] Links verified
-- [ ] Images have alt text
-- [ ] Consistent terminology
-- [ ] Spell check completed
-- [ ] Mobile-friendly formatting
+```yaml
+retry_patterns:
+  code_sample_fails:
+    strategy: "Test in clean environment"
+    fallback: "Add version requirements note"
+
+  unclear_explanation:
+    strategy: "Rewrite with example first"
+
+  seo_not_ranking:
+    strategy: "Audit keywords, improve title"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Code doesn't work | Reader reports | Hotfix, add version note |
+| Outdated info | API changed | Update + deprecation notice |
+| Poor engagement | Low time on page | Rewrite hook |
+
+## Debug Checklist
+
+```
+□ Code samples tested?
+□ Links verified?
+□ Images have alt text?
+□ Consistent terminology?
+□ Spell check completed?
+□ Mobile-friendly formatting?
+□ Meta description ready?
+□ Clear CTA at end?
+```
+
+## Test Template
+
+```yaml
+test_technical_writing:
+  unit_tests:
+    - test_code_compiles:
+        assert: "Code runs without errors"
+    - test_links_valid:
+        assert: "200 OK response"
+
+  integration_tests:
+    - test_reader_journey:
+        assert: "Achieves stated outcome"
+```
+
+## Quality Metrics
+
+| Metric | Target |
+|--------|--------|
+| Readability | Flesch 60+ |
+| Code accuracy | 100% working |
+| Time on page | >3 min |
+
+## Observability
+
+```yaml
+metrics:
+  - word_count: integer
+  - code_blocks_count: integer
+  - reading_time: duration
+```
 
 See `assets/` for writing templates.

@@ -1,7 +1,9 @@
 ---
 name: thought-leadership
 description: Building thought leadership through publishing, speaking, and industry influence
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 01-devrel-strategist
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Thought Leadership
 
 Build **industry influence** and recognition as a DevRel professional.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - leadership_type: enum[publishing, speaking, community, advisory]
+    - expertise_area: string
+  optional:
+    - target_audience: array[string]
+    - timeline: duration
+```
+
+### Output
+```yaml
+output:
+  strategy:
+    content_plan: array[ContentItem]
+    speaking_targets: array[Event]
+    influence_metrics: object
+```
 
 ## Thought Leadership Pillars
 
@@ -89,5 +113,66 @@ Thought leadership leads to:
 - Book deals
 - Advisory roles
 - Industry recognition
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  low_engagement:
+    strategy: "Refine topic angle"
+    fallback: "Test different platforms"
+
+  rejection_from_events:
+    strategy: "Improve proposal quality"
+    fallback: "Start with smaller events"
+
+  burnout:
+    strategy: "Reduce frequency, batch content"
+    fallback: "Focus on highest-impact activities"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Content ignored | Low engagement | Adjust topic/timing |
+| Speaking rejected | CFP declined | Improve abstracts |
+| Credibility questioned | Negative feedback | Address directly, be humble |
+
+## Debug Checklist
+
+```
+□ Expertise clearly defined?
+□ Unique perspective identified?
+□ Publishing cadence sustainable?
+□ Platforms prioritized correctly?
+□ Metrics being tracked?
+□ Network growing authentically?
+```
+
+## Test Template
+
+```yaml
+test_thought_leadership:
+  unit_tests:
+    - test_content_quality:
+        assert: "Provides unique value"
+    - test_consistency:
+        assert: "Regular publishing cadence"
+
+  integration_tests:
+    - test_influence_growth:
+        assert: "Measurable increase over time"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - speaking_invitations: integer
+  - content_published: integer
+  - engagement_rate: float
+  - inbound_opportunities: integer
+```
 
 See `assets/` for personal brand templates.

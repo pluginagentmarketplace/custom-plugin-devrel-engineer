@@ -1,7 +1,9 @@
 ---
 name: video-production
 description: Technical video production including tutorials, live streams, and YouTube content
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 03-content-creator
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Video Production for DevRel
 
 Create **engaging technical videos** from tutorials to live coding sessions.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - video_type: enum[short, tutorial, deep_dive, livestream]
+    - topic: string
+  optional:
+    - duration_target: duration
+    - platform: enum[youtube, tiktok, linkedin, twitch]
+```
+
+### Output
+```yaml
+output:
+  video:
+    script_outline: markdown
+    equipment_checklist: array[string]
+    post_production_notes: array[string]
+```
 
 ## Video Types
 
@@ -30,13 +54,13 @@ Outline  Capture   Cut    QA check  Upload    Social
 
 ## Equipment Setup
 
-### Minimum Viable Setup (~$500)
+### Minimum Viable (~$500)
 - Webcam (Logitech C920/C922)
 - USB microphone (Blue Yeti/AT2020)
 - Ring light
 - OBS Studio (free)
 
-### Professional Setup (~$2000+)
+### Professional (~$2000+)
 - DSLR/mirrorless camera
 - XLR microphone + interface
 - Key + fill lighting
@@ -48,7 +72,6 @@ Outline  Capture   Cut    QA check  Upload    Social
 - 1080p minimum, 4K preferred
 - Clean desktop (hide icons)
 - Increase font sizes (140%)
-- Use keyboard shortcuts visible
 - Record in segments
 
 ### On-Camera
@@ -56,13 +79,12 @@ Outline  Capture   Cut    QA check  Upload    Social
 - Well-lit face (no shadows)
 - Neutral background
 - Look at camera (not screen)
-- Energy slightly higher than normal
 
 ## Editing Workflow
 
 1. **Rough cut**: Remove mistakes, dead air
 2. **Fine cut**: Tighten pacing
-3. **Polish**: Add B-roll, graphics, music
+3. **Polish**: Add B-roll, graphics
 4. **Audio**: Level, noise reduction
 5. **Export**: Platform-optimized settings
 
@@ -74,6 +96,63 @@ Outline  Capture   Cut    QA check  Upload    Social
 | Thumbnail | Bold text, faces, contrast |
 | Description | Links, timestamps, keywords |
 | Tags | 5-10 relevant keywords |
-| End screen | Subscribe + related videos |
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  poor_audio:
+    strategy: "Re-record with better mic placement"
+
+  low_engagement:
+    strategy: "Improve thumbnail and title"
+
+  tech_issues_during_record:
+    strategy: "Record in segments, have backup"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Audio issues | Bad sound | Re-record or AI cleanup |
+| Poor lighting | Dark footage | Add post-processing |
+| Low views | <10% click rate | Update thumbnail |
+
+## Debug Checklist
+
+```
+□ Script/outline ready?
+□ Equipment tested?
+□ Background clean?
+□ Audio levels checked?
+□ Recording software set up?
+□ Backup storage available?
+```
+
+## Test Template
+
+```yaml
+test_video_production:
+  unit_tests:
+    - test_audio_quality:
+        assert: "Clear, no background noise"
+    - test_video_quality:
+        assert: "1080p minimum"
+
+  integration_tests:
+    - test_full_workflow:
+        assert: "Script to publish complete"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - video_length: duration
+  - views: integer
+  - watch_time_avg: duration
+  - click_through_rate: float
+```
 
 See `assets/` for production checklists.

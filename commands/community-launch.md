@@ -1,13 +1,36 @@
 ---
 description: Plan and execute a developer community launch
 allowed-tools: Read, Write, Edit, WebSearch
+sasmp_version: "1.4.0"
+version: "2.0.0"
 ---
 
 # Community Launch Planner
 
 Help plan and execute a developer community launch.
 
+## Input Validation
+
+```yaml
+input:
+  required:
+    - platform: enum[discord, slack, forum, github]
+  optional:
+    - community_name: string
+    - target_size: integer
+    - launch_date: date
+  validation:
+    - platform must be one of the allowed values
+    - target_size must be positive integer if provided
+```
+
 ## Workflow
+
+```
+Define → Select → Structure → Guidelines → Launch
+  ↓        ↓         ↓           ↓           ↓
+Goals   Platform  Channels   CoC/Rules    Outreach
+```
 
 1. Define community goals and audience
 2. Select platform (Discord, Slack, Forum)
@@ -53,7 +76,38 @@ Help plan and execute a developer community launch.
 - Month 1: [Target engagement]
 ```
 
+## Exit Codes
+
+| Code | Meaning | Action |
+|------|---------|--------|
+| 0 | Success | Launch plan generated |
+| 1 | Invalid platform | Show supported platforms |
+| 2 | Missing goals | Prompt for community objectives |
+
 ## Usage
+
 ```
 /community-launch [platform]
+/community-launch discord --name="DevAPI Community" --target=500
+```
+
+## Troubleshooting
+
+### Common Issues
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Low engagement | No content ready | Pre-seed with discussions |
+| Spam/trolls | No moderation | Set up automod rules |
+| Ghost town | Launched too early | Build founding member group first |
+
+### Debug Checklist
+
+```
+□ Platform configured correctly?
+□ Channels logically organized?
+□ Code of conduct published?
+□ Moderation team assigned?
+□ Welcome flow tested?
+□ Founding members confirmed?
 ```

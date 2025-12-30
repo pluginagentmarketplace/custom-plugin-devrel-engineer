@@ -1,7 +1,9 @@
 ---
 name: tutorials-samples
 description: Creating tutorials, code samples, and example applications for developer onboarding
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 04-technical-writer
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Tutorials & Code Samples
 
 Create **effective tutorials and sample code** that accelerate developer learning.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - tutorial_type: enum[quickstart, walkthrough, deep_dive, workshop]
+    - topic: string
+  optional:
+    - languages: array[string]
+    - duration_target: duration
+```
+
+### Output
+```yaml
+output:
+  tutorial:
+    content: markdown
+    code_samples: array[CodeBlock]
+    repository_structure: object
+```
 
 ## Tutorial Types
 
@@ -90,6 +114,54 @@ sample-app/
 └── tests/           # Example tests
 ```
 
+## Retry Logic
+
+```yaml
+retry_patterns:
+  code_doesnt_work:
+    strategy: "Test in clean environment"
+
+  user_stuck:
+    strategy: "Add more detail, screenshots"
+
+  outdated_deps:
+    strategy: "Update, add version notes"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Code fails | User reports | Fix immediately |
+| Deps outdated | Security alert | Update, test |
+| Missing steps | User stuck | Add detail |
+
+## Debug Checklist
+
+```
+□ Works on clone/download?
+□ Clear README instructions?
+□ Environment variables documented?
+□ Error handling included?
+□ Comments explain "why"?
+□ Tests pass?
+```
+
+## Test Template
+
+```yaml
+test_tutorials:
+  unit_tests:
+    - test_code_runs:
+        assert: "All samples execute"
+    - test_deps_current:
+        assert: "No security issues"
+
+  integration_tests:
+    - test_fresh_clone:
+        assert: "Works from scratch"
+```
+
 ## Quality Checklist
 
 - [ ] Works on clone/download
@@ -97,5 +169,14 @@ sample-app/
 - [ ] Environment variables documented
 - [ ] Error handling included
 - [ ] Comments explain "why"
+
+## Observability
+
+```yaml
+metrics:
+  - tutorials_published: integer
+  - samples_tested: integer
+  - user_completion_rate: float
+```
 
 See `assets/` for sample templates.

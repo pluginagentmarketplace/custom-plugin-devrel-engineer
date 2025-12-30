@@ -1,7 +1,9 @@
 ---
 name: public-speaking
 description: Public speaking techniques for developer conferences, meetups, and presentations
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 06-developer-advocate
 bond_type: PRIMARY_BOND
 ---
@@ -10,9 +12,36 @@ bond_type: PRIMARY_BOND
 
 Master **public speaking** for developer conferences, meetups, and technical presentations.
 
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - talk_type: enum[lightning, standard, keynote, workshop]
+    - topic: string
+  optional:
+    - duration_minutes: integer
+    - audience_level: enum[beginner, intermediate, advanced]
+    - demo_included: boolean
+```
+
+### Output
+```yaml
+output:
+  talk_prep:
+    outline: markdown
+    slide_count: integer
+    speaker_notes: array[string]
+  delivery:
+    hook: string
+    key_messages: array[string]
+    closing_cta: string
+```
+
 ## Core Techniques
 
-### The Hook
+### The Hook (First 30 Seconds)
 ```
 First 30 seconds determine if audience stays engaged:
 - Start with a problem statement
@@ -39,12 +68,21 @@ Example:
 
 ## Presentation Tips
 
-| Technique | Description |
-|-----------|-------------|
-| **PechaKucha** | 20 slides, 20 seconds each |
-| **Mind Mapping** | Visual structure for ideas |
-| **Contrast** | Before/after, problem/solution |
-| **Repetition** | Key phrases for emphasis |
+| Technique | Description | Best For |
+|-----------|-------------|----------|
+| **PechaKucha** | 20 slides, 20 seconds each | Quick overviews |
+| **Problem-Solution** | Pain → Fix → Proof | Technical tutorials |
+| **Demo-First** | Show working, then explain | Product showcases |
+| **Repetition** | Key phrases for emphasis | Key concepts |
+
+## Talk Types
+
+| Type | Duration | Slides | Prep Time |
+|------|----------|--------|-----------|
+| Lightning | 5 min | 5-10 | 2-4 hours |
+| Standard | 20-30 min | 20-40 | 1-2 weeks |
+| Keynote | 45-60 min | 40-60 | 3-4 weeks |
+| Workshop | 2-4 hours | 30-50 | 4-6 weeks |
 
 ## Handling Q&A
 
@@ -62,13 +100,70 @@ Example:
 - Use speaker notes (not scripts)
 - Focus on helping audience, not on yourself
 
-## Talk Types
+## Retry Logic
 
-| Type | Duration | Depth |
-|------|----------|-------|
-| Lightning | 5 min | One idea |
-| Standard | 20-30 min | Full topic |
-| Keynote | 45-60 min | Vision + depth |
-| Workshop | 2-4 hours | Hands-on |
+```yaml
+retry_patterns:
+  tech_failure:
+    strategy: "Switch to backup slides/demo"
+    fallback: "Continue without demo, describe visually"
+
+  lost_place:
+    strategy: "Pause, check notes, summarize so far"
+    recovery: "As I was saying... [pick up thread]"
+
+  audience_disengaged:
+    strategy: "Ask question, add interactive element"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Slides won't load | Black screen | Use backup USB/PDF |
+| Demo crashes | Error message | Pre-recorded backup |
+| Running over time | 5 min warning | Skip to conclusion |
+| Mic issues | No audio | Project louder |
+
+## Debug Checklist
+
+```
+□ Talk outline reviewed?
+□ Slides tested on actual display?
+□ Demo rehearsed 3+ times?
+□ Backup slides on USB?
+□ Speaker notes ready?
+□ Water at podium?
+□ Mic tested?
+□ Timing practiced?
+```
+
+## Test Template
+
+```yaml
+test_public_speaking:
+  unit_tests:
+    - test_timing:
+        input: "Full rehearsal"
+        assert: "Within ±2 min of target"
+    - test_key_messages:
+        input: "3 takeaways"
+        assert: "Audience can recall"
+
+  integration_tests:
+    - test_full_delivery:
+        scenario: "Complete run-through"
+        assert: "Smooth flow, on time"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - audience_size: integer
+  - talk_rating: float
+  - on_time_finish: boolean
+  - demo_success: boolean
+```
 
 See `assets/` for talk templates and `references/` for presentation guides.

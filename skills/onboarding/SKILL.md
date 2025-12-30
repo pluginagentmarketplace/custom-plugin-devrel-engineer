@@ -1,7 +1,9 @@
 ---
 name: developer-onboarding
 description: Creating effective developer onboarding experiences
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 04-technical-writer
 bond_type: SECONDARY_BOND
 ---

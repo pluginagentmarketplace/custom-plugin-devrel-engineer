@@ -1,7 +1,9 @@
 ---
 name: documentation
 description: Developer documentation including API references, guides, and getting started content
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 04-technical-writer
 bond_type: PRIMARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: PRIMARY_BOND
 # Developer Documentation
 
 Create **comprehensive, usable documentation** that helps developers succeed.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - doc_type: enum[quickstart, tutorial, howto, concept, reference]
+    - product_area: string
+  optional:
+    - api_spec: object
+    - target_ttfhw: duration
+```
+
+### Output
+```yaml
+output:
+  documentation:
+    content: markdown
+    code_samples: array[CodeBlock]
+    navigation: object
+```
 
 ## Documentation Types
 
@@ -36,10 +60,6 @@ Docs Site
 │   ├── Endpoints
 │   ├── Parameters
 │   └── Response Codes
-├── SDKs
-│   ├── Python
-│   ├── JavaScript
-│   └── Go
 └── Resources
     ├── FAQ
     ├── Changelog
@@ -75,8 +95,55 @@ What to do after this
 ```
 Write (MD) → Review (PR) → Build (CI) → Deploy (CD)
     ↓          ↓            ↓            ↓
-  Local     GitHub       Docusaurus   Vercel/
-  Editor    Review       Build        Netlify
+  Local     GitHub       Docusaurus   Vercel
+```
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  outdated_content:
+    strategy: "Sync with latest API version"
+
+  user_confusion:
+    strategy: "Add examples, clarify language"
+
+  broken_code_samples:
+    strategy: "Test in CI, fix immediately"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Outdated | API changed | Update with deprecation |
+| Broken links | 404 errors | Fix or redirect |
+| User can't complete | Feedback | Add missing steps |
+
+## Debug Checklist
+
+```
+□ All code samples tested?
+□ Prerequisites complete?
+□ Links working?
+□ Version numbers specified?
+□ Screenshots current?
+□ Follows style guide?
+```
+
+## Test Template
+
+```yaml
+test_documentation:
+  unit_tests:
+    - test_code_samples:
+        assert: "All code runs"
+    - test_links:
+        assert: "No 404s"
+
+  integration_tests:
+    - test_ttfhw:
+        assert: "<10 min to first success"
 ```
 
 ## Quality Metrics
@@ -84,8 +151,18 @@ Write (MD) → Review (PR) → Build (CI) → Deploy (CD)
 | Metric | Target |
 |--------|--------|
 | Time to first success | <10 min |
-| Doc search success rate | >80% |
-| Support ticket deflection | 60%+ |
-| User satisfaction | >4.0/5.0 |
+| Doc search success | >80% |
+| Ticket deflection | 60%+ |
+| User satisfaction | >4.0/5 |
+
+## Observability
+
+```yaml
+metrics:
+  - pages_updated: integer
+  - code_samples_tested: integer
+  - user_satisfaction: float
+  - search_success_rate: float
+```
 
 See `assets/` for documentation templates.

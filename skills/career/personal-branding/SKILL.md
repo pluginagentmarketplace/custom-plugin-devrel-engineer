@@ -1,7 +1,9 @@
 ---
 name: personal-branding
 description: Building and maintaining a personal brand in the developer community
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 06-developer-advocate
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Personal Branding for DevRel
 
 Build a **recognizable personal brand** that amplifies your DevRel impact.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - brand_element: enum[identity, voice, presence, network]
+    - platforms: array[string]
+  optional:
+    - audit_existing: boolean
+    - target_persona: string
+```
+
+### Output
+```yaml
+output:
+  brand_strategy:
+    identity_guide: object
+    content_voice: object
+    platform_priorities: array[Platform]
+```
 
 ## Brand Components
 
@@ -96,5 +120,66 @@ Examples:
 - Review feedback
 - Plan next week
 - Update content calendar
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  low_visibility:
+    strategy: "Increase posting frequency"
+    fallback: "Engage more with others"
+
+  inconsistent_presence:
+    strategy: "Batch content creation"
+    fallback: "Focus on fewer platforms"
+
+  negative_perception:
+    strategy: "Address feedback directly"
+    fallback: "Pivot messaging"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Brand confusion | Mixed messaging | Clarify positioning |
+| Low engagement | Declining metrics | Refresh content strategy |
+| Burnout | Reduced output | Batch work, take breaks |
+
+## Debug Checklist
+
+```
+□ Identity consistent across platforms?
+□ Bio clearly communicates value?
+□ Voice authentic and distinctive?
+□ Posting cadence sustainable?
+□ Engaging with community regularly?
+□ Analytics being reviewed?
+```
+
+## Test Template
+
+```yaml
+test_personal_branding:
+  unit_tests:
+    - test_brand_consistency:
+        assert: "Same across all platforms"
+    - test_voice_authenticity:
+        assert: "Unique and recognizable"
+
+  integration_tests:
+    - test_audience_growth:
+        assert: "Consistent follower increase"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - followers_total: integer
+  - engagement_rate: float
+  - brand_mentions: integer
+  - inbound_connections: integer
+```
 
 See `assets/` for networking templates.

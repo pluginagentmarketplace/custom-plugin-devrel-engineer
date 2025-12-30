@@ -1,7 +1,9 @@
 ---
 name: developer-support
 description: Developer support systems including forums, office hours, and FAQ management
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 06-developer-advocate
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Developer Support
 
 Build **effective support systems** that help developers succeed and scale.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - support_type: enum[question, bug, feature, escalation]
+    - context: string
+  optional:
+    - urgency: enum[low, medium, high, critical]
+    - channel: enum[forum, discord, ticket, office_hours]
+```
+
+### Output
+```yaml
+output:
+  response:
+    answer: string
+    resources: array[Link]
+    follow_up: array[Action]
+```
 
 ## Support Channels
 
@@ -18,7 +42,6 @@ Build **effective support systems** that help developers succeed and scale.
 | Forum/Discord | 4-24 hours | Community Q&A |
 | Office Hours | Scheduled | Complex issues |
 | Support Tickets | 24-48 hours | Bugs/urgent |
-| Live Chat | Minutes | Quick questions |
 
 ## Support Tier Model
 
@@ -68,9 +91,7 @@ Q: How do I authenticate with the API?
 A: You can authenticate using API keys or OAuth 2.0:
 
 **API Keys** (simplest)
-```code
 curl -H "Authorization: Bearer YOUR_API_KEY" ...
-```
 
 **OAuth 2.0** (for user data)
 [See our OAuth guide →](/docs/oauth)
@@ -81,16 +102,74 @@ Related: [Authentication errors](/docs/errors#auth)
 ### FAQ Sources
 - Support tickets (recurring issues)
 - Community questions
-- Search queries (what people look for)
+- Search queries
 - User feedback
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  unresolved_question:
+    strategy: "Escalate to specialist"
+
+  user_frustrated:
+    strategy: "Personal outreach, expedite"
+
+  recurring_issue:
+    strategy: "Create FAQ, update docs"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Slow response | >24h wait | Prioritize, apologize |
+| Wrong answer | User correction | Fix, thank user |
+| No resolution | Multiple back-forth | Escalate |
+
+## Debug Checklist
+
+```
+□ Problem clearly understood?
+□ Docs checked first?
+□ Similar issues in history?
+□ Reproducible steps?
+□ Workaround available?
+□ Escalation path clear?
+```
+
+## Test Template
+
+```yaml
+test_developer_support:
+  unit_tests:
+    - test_response_time:
+        assert: "<24h for community"
+    - test_answer_accuracy:
+        assert: "Solves problem"
+
+  integration_tests:
+    - test_escalation_flow:
+        assert: "Reaches specialist"
+```
 
 ## Support Metrics
 
 | Metric | Target |
 |--------|--------|
-| Response time (community) | <24 hours |
+| Response time | <24 hours |
 | Resolution rate | >80% |
 | CSAT score | >4.0/5 |
 | Ticket deflection | >60% |
+
+## Observability
+
+```yaml
+metrics:
+  - tickets_resolved: integer
+  - response_time_avg: duration
+  - csat_score: float
+  - deflection_rate: float
+```
 
 See `assets/` for support templates.
