@@ -1,7 +1,9 @@
 ---
 name: social-media
 description: Social media strategy for developers including Twitter/X, LinkedIn, and community platforms
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 03-content-creator
 bond_type: SECONDARY_BOND
 ---
@@ -10,12 +12,35 @@ bond_type: SECONDARY_BOND
 
 Build **developer-focused social media presence** that drives engagement and community growth.
 
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - platform: enum[twitter, linkedin, youtube, reddit, discord]
+    - content_type: enum[post, thread, video, story]
+  optional:
+    - topic: string
+    - campaign: string
+```
+
+### Output
+```yaml
+output:
+  content:
+    text: string
+    hashtags: array[string]
+    media_specs: object
+    scheduling: datetime
+```
+
 ## Platform Strategy
 
 | Platform | Audience | Content Type |
 |----------|----------|--------------|
-| **Twitter/X** | Developers, tech | Quick tips, threads, news |
-| **LinkedIn** | Professionals | Long-form, career content |
+| **Twitter/X** | Developers, tech | Quick tips, threads |
+| **LinkedIn** | Professionals | Long-form, career |
 | **YouTube** | Learners | Tutorials, deep dives |
 | **Reddit** | Communities | Discussions, Q&A |
 | **Discord** | Real-time | Support, community |
@@ -53,7 +78,6 @@ Use line breaks liberally.
 
 • Bullet points work well
 • Easy to scan
-• Mobile-friendly
 
 End with question or CTA
 
@@ -70,6 +94,54 @@ End with question or CTA
 | Thu | LinkedIn | Personal story |
 | Fri | Twitter | Fun/community |
 
+## Retry Logic
+
+```yaml
+retry_patterns:
+  low_engagement:
+    strategy: "Adjust timing, improve hook"
+
+  algorithm_change:
+    strategy: "Adapt content format"
+
+  negative_feedback:
+    strategy: "Address directly, learn"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Low reach | <avg impressions | Boost with engagement |
+| Negative response | Comments | Address, apologize if needed |
+| Account issues | Restricted | Contact support |
+
+## Debug Checklist
+
+```
+□ Content aligned with platform?
+□ Optimal posting time?
+□ Hashtags relevant?
+□ Media formatted correctly?
+□ Links working?
+□ CTA clear?
+```
+
+## Test Template
+
+```yaml
+test_social_media:
+  unit_tests:
+    - test_content_format:
+        assert: "Meets platform specs"
+    - test_links_work:
+        assert: "All links resolve"
+
+  integration_tests:
+    - test_engagement:
+        assert: "Above baseline rate"
+```
+
 ## Metrics to Track
 
 - Follower growth rate
@@ -77,5 +149,15 @@ End with question or CTA
 - Click-through rate
 - Share/retweet ratio
 - Profile visits
+
+## Observability
+
+```yaml
+metrics:
+  - posts_published: integer
+  - engagement_rate: float
+  - follower_growth: integer
+  - reach: integer
+```
 
 See `assets/` for content templates.

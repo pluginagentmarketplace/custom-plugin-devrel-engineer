@@ -1,7 +1,9 @@
 ---
 name: analytics-reporting
 description: DevRel metrics, analytics dashboards, and program reporting
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 07-metrics-analyst
 bond_type: PRIMARY_BOND
 ---
@@ -9,6 +11,29 @@ bond_type: PRIMARY_BOND
 # DevRel Analytics & Reporting
 
 Measure **program impact** with data-driven metrics and reporting.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - report_type: enum[pulse, monthly, quarterly, annual]
+    - metrics_focus: array[string]
+  optional:
+    - date_range: object{start, end}
+    - comparison_period: enum[wow, mom, yoy]
+```
+
+### Output
+```yaml
+output:
+  report:
+    summary: object
+    visualizations: array[Chart]
+    insights: array[string]
+    recommendations: array[Action]
+```
 
 ## Key Metrics Framework
 
@@ -113,5 +138,66 @@ Solutions:
 - Developer surveys
 - CRM integration
 - Cohort analysis
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  data_incomplete:
+    strategy: "Extend collection window"
+    fallback: "Use available data with disclaimer"
+
+  dashboard_error:
+    strategy: "Refresh data sources"
+    fallback: "Manual data pull"
+
+  metric_anomaly:
+    strategy: "Verify data integrity"
+    fallback: "Flag for review"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Missing data | Gaps in metrics | Backfill or document |
+| Wrong calculations | Audit reveals errors | Fix formula, rerun |
+| Outdated dashboard | Stale data shown | Refresh pipeline |
+
+## Debug Checklist
+
+```
+□ Data sources connected?
+□ Date ranges correct?
+□ Calculations verified?
+□ Comparison periods aligned?
+□ Visualizations rendering?
+□ Insights actionable?
+```
+
+## Test Template
+
+```yaml
+test_analytics_reporting:
+  unit_tests:
+    - test_data_accuracy:
+        assert: "Matches source systems"
+    - test_calculations:
+        assert: "Formulas correct"
+
+  integration_tests:
+    - test_dashboard_load:
+        assert: "<5s load time"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - reports_generated: integer
+  - dashboard_views: integer
+  - data_freshness: duration
+  - insight_accuracy: float
+```
 
 See `assets/` for dashboard templates.

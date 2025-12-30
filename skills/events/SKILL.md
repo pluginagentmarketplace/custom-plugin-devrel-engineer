@@ -1,7 +1,9 @@
 ---
 name: event-management
 description: Planning and executing developer events, conferences, and meetups
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 05-event-manager
 bond_type: PRIMARY_BOND
 ---

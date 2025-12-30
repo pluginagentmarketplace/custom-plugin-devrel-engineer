@@ -1,7 +1,9 @@
 ---
 name: apis-sdks
 description: Understanding APIs and building/maintaining SDKs for developer experience
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 04-technical-writer
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # APIs & SDKs for DevRel
 
 Master **API design and SDK development** to improve developer experience.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - artifact_type: enum[api_docs, sdk, code_sample, reference]
+    - language: string
+  optional:
+    - api_spec: object
+    - version: string
+```
+
+### Output
+```yaml
+output:
+  deliverable:
+    code: string
+    documentation: markdown
+    tests: array[TestCase]
+```
 
 ## API Fundamentals
 
@@ -107,5 +131,66 @@ Returns a user by their ID.
 - Write API documentation
 - Gather feedback on DX issues
 - Support developers using APIs
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  api_error_500:
+    strategy: "Exponential backoff with jitter"
+    max_retries: 3
+
+  rate_limit_429:
+    strategy: "Wait for retry-after header"
+    fallback: "Exponential backoff"
+
+  timeout:
+    strategy: "Retry with increased timeout"
+    fallback: "Return partial data"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| API breaking change | Tests fail | Update SDK, notify users |
+| SDK version mismatch | Compatibility errors | Align versions |
+| Missing docs | Support tickets | Add documentation |
+
+## Debug Checklist
+
+```
+□ API spec up to date?
+□ SDK matches API version?
+□ Error handling complete?
+□ Rate limiting documented?
+□ Authentication working?
+□ Examples tested?
+```
+
+## Test Template
+
+```yaml
+test_apis_sdks:
+  unit_tests:
+    - test_api_endpoints:
+        assert: "All endpoints respond"
+    - test_sdk_methods:
+        assert: "Match API capabilities"
+
+  integration_tests:
+    - test_end_to_end:
+        assert: "Full flow works"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - sdk_downloads: integer
+  - api_calls: integer
+  - error_rate: float
+  - latency_p99: duration
+```
 
 See `assets/` for SDK templates.

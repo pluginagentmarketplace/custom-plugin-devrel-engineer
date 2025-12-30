@@ -1,7 +1,9 @@
 ---
 name: devrel-metrics
 description: Measuring and demonstrating DevRel impact through data and analytics
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 07-metrics-analyst
 bond_type: PRIMARY_BOND
 ---

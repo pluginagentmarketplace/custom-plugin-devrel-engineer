@@ -1,7 +1,9 @@
 ---
 name: blogging
 description: Technical blogging strategies, SEO, and content creation for developer audiences
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 03-content-creator
 bond_type: PRIMARY_BOND
 ---
@@ -9,6 +11,30 @@ bond_type: PRIMARY_BOND
 # Technical Blogging
 
 Create **compelling technical blog content** that educates and engages developers.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - topic: string
+    - target_audience: enum[beginner, intermediate, advanced]
+  optional:
+    - word_count: integer
+    - seo_keywords: array[string]
+    - include_code: boolean
+```
+
+### Output
+```yaml
+output:
+  blog_post:
+    title: string
+    body: markdown
+    meta_description: string
+    estimated_reading_time: duration
+```
 
 ## Content Strategy
 
@@ -49,11 +75,6 @@ What they need to know/have before starting.
 ### Section 2: The Why
 ### Section 3: The How (with code)
 
-## Code Example
-```code
-// Complete, working example
-```
-
 ## Summary
 - Key takeaway 1
 - Key takeaway 2
@@ -83,12 +104,63 @@ What they need to know/have before starting.
 4. **Be concise** - Cut ruthlessly
 5. **End with action** - What should reader do next
 
-## Quality Checklist
+## Retry Logic
 
-- [ ] Code examples tested
-- [ ] Links verified
-- [ ] Images optimized
-- [ ] Spell/grammar checked
-- [ ] Mobile preview OK
+```yaml
+retry_patterns:
+  low_engagement:
+    strategy: "Rewrite hook, add visuals"
+
+  seo_not_ranking:
+    strategy: "Audit keywords, update title"
+
+  code_errors_reported:
+    strategy: "Test in fresh environment, fix"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| Code doesn't work | Reader feedback | Hotfix immediately |
+| Low engagement | <2 min avg time | Rewrite hook |
+| Not ranking | Not in top 20 | SEO audit |
+
+## Debug Checklist
+
+```
+□ Code examples tested?
+□ Links verified?
+□ Images optimized?
+□ Spell/grammar checked?
+□ Mobile preview OK?
+□ Meta description set?
+□ Keywords in title?
+```
+
+## Test Template
+
+```yaml
+test_blogging:
+  unit_tests:
+    - test_code_works:
+        assert: "All code samples run"
+    - test_seo_elements:
+        assert: "Title, meta, keywords present"
+
+  integration_tests:
+    - test_reader_journey:
+        assert: "Can follow to completion"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - word_count: integer
+  - reading_time: duration
+  - code_blocks: integer
+  - publish_date: date
+```
 
 See `assets/` for blog templates.

@@ -1,7 +1,9 @@
 ---
 name: community-building
 description: Building and nurturing thriving developer communities
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 02-community-builder
 bond_type: PRIMARY_BOND
 ---

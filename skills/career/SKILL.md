@@ -1,7 +1,9 @@
 ---
 name: devrel-career
 description: Developer relations career development, growth paths, and professional advancement
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 01-devrel-strategist
 bond_type: SECONDARY_BOND
 ---

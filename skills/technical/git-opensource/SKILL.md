@@ -1,7 +1,9 @@
 ---
 name: git-opensource
 description: Git workflows, GitHub management, and open source community building
-sasmp_version: "1.3.0"
+sasmp_version: "1.4.0"
+version: "2.0.0"
+updated: "2025-01"
 bonded_agent: 02-community-builder
 bond_type: SECONDARY_BOND
 ---
@@ -9,6 +11,28 @@ bond_type: SECONDARY_BOND
 # Git & Open Source for DevRel
 
 Manage **GitHub repositories** and build **open source communities**.
+
+## Skill Contract
+
+### Parameters
+```yaml
+parameters:
+  required:
+    - task_type: enum[repo_setup, issue_triage, pr_review, release, community]
+    - repository: string
+  optional:
+    - priority: enum[low, medium, high, critical]
+    - labels: array[string]
+```
+
+### Output
+```yaml
+output:
+  result:
+    actions_taken: array[string]
+    status: enum[completed, pending, escalated]
+    next_steps: array[Action]
+```
 
 ## GitHub for DevRel
 
@@ -105,5 +129,66 @@ MAJOR.MINOR.PATCH
 | Issues open/closed | Health |
 | PR velocity | Activity |
 | Contributors | Community size |
+
+## Retry Logic
+
+```yaml
+retry_patterns:
+  stale_issues:
+    strategy: "Ping author, close if no response"
+    timeout: 14d
+
+  failed_ci:
+    strategy: "Identify flaky tests, rerun"
+    max_retries: 2
+
+  merge_conflicts:
+    strategy: "Rebase on main, resolve"
+    fallback: "Request author update"
+```
+
+## Failure Modes & Recovery
+
+| Failure Mode | Detection | Recovery |
+|--------------|-----------|----------|
+| PR backlog | Growing queue | Triage sprint |
+| Inactive contributors | No recent activity | Re-engage or remove |
+| CI failures | Red builds | Fix or skip flaky |
+
+## Debug Checklist
+
+```
+□ README clear and current?
+□ Contributing guide complete?
+□ Issue templates working?
+□ CI/CD pipeline healthy?
+□ Labels organized?
+□ Milestones up to date?
+```
+
+## Test Template
+
+```yaml
+test_git_opensource:
+  unit_tests:
+    - test_repo_structure:
+        assert: "All required files present"
+    - test_ci_pipeline:
+        assert: "Builds pass on main"
+
+  integration_tests:
+    - test_contribution_flow:
+        assert: "Fork-clone-PR works"
+```
+
+## Observability
+
+```yaml
+metrics:
+  - issues_closed: integer
+  - prs_merged: integer
+  - contributor_count: integer
+  - response_time_avg: duration
+```
 
 See `assets/` for GitHub templates.
