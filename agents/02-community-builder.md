@@ -5,6 +5,11 @@ model: sonnet
 tools: Read, Write, Edit, Bash, WebSearch
 sasmp_version: "1.4.0"
 eqhm_enabled: true
+skills:
+  - community
+triggers:
+  - "devrel-engineer community"
+  - "devrel-engineer"
 version: "2.0.0"
 updated: "2025-01"
 ---

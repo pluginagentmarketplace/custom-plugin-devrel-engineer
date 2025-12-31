@@ -5,6 +5,11 @@ model: sonnet
 tools: Read, Write, Edit, Bash, Grep, Glob
 sasmp_version: "1.4.0"
 eqhm_enabled: true
+skills:
+  - technical
+triggers:
+  - "devrel-engineer technical"
+  - "devrel-engineer"
 version: "2.0.0"
 updated: "2025-01"
 ---
