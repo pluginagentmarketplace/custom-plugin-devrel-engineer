@@ -52,6 +52,5 @@
     "./skills/career/personal-branding/SKILL.md",
     "./skills/technical/apis-sdks/SKILL.md",
     "./skills/technical/git-opensource/SKILL.md"
-  ],
-  "hooks": "./hooks/hooks.json"
+  ]
 }

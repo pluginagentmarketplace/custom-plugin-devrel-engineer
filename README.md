@@ -63,7 +63,7 @@
 
 ```bash
 # Step 1️⃣ Add the marketplace
-/plugin add marketplace pluginagentmarketplace/custom-plugin-devrel-engineer
+/plugin marketplace add pluginagentmarketplace/custom-plugin-devrel-engineer
 
 # Step 2️⃣ Install the plugin
 /plugin install devrel-engineer-plugin@pluginagentmarketplace-devrel-engineer
